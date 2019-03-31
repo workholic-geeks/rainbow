@@ -16,4 +16,5 @@ public class RainbowApplication extends SpringBootServletInitializer {
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
 		return builder.sources(RainbowApplication.class);
 	}
-} 
+
+}
