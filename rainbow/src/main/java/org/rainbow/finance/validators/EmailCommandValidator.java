@@ -13,6 +13,7 @@ import org.springframework.validation.Validator;
 public class EmailCommandValidator implements Validator {
 
 	@Autowired
+	@Qualifier("propertySource")
 	private PropertySource propertySource;
 
 	@Override

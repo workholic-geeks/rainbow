@@ -5,9 +5,9 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@PropertySource("classpath:mail/mail.obj")
 @Component
 @Scope("singleton")
+@PropertySource("classpath:mail/mail.obj")
 public class MailProperties {
 
 	@Value("${mail.smtp.starttls.enable}")
@@ -33,6 +33,9 @@ public class MailProperties {
 
 	@Value("${mail.password}")
 	private String password;
+
+	@Value("${mail.body.template.name}")
+	private String mailBodyFileName;
 
 	public Boolean getStarttlsEnabled() {
 		return starttlsEnabled;
@@ -96,6 +99,14 @@ public class MailProperties {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public String getMailBodyFileName() {
+		return mailBodyFileName;
+	}
+
+	public void setMailBodyFileName(String mailBodyFileName) {
+		this.mailBodyFileName = mailBodyFileName;
 	}
 
 }

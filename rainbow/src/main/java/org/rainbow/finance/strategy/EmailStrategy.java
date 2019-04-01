@@ -22,6 +22,7 @@ public class EmailStrategy implements Strategy<EmailResponse, Command> {
 	private Validator emailValidator;
 
 	@Autowired
+	@Qualifier("emailService")
 	private EmailService emailService;
 
 	@Override

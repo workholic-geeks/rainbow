@@ -77,5 +77,23 @@ public interface Command {
 	 * @param comments
 	 */
 	public void setComments(String comments);
+	
+	/**
+	 * 
+	 * @param Name
+	 */
+	public void setName(String Name);
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public String getName();
+	
+	
+	public void setPersonEmail(String personEmail);
+	
+	
+	public String getPersonEmail(); 
 
 }

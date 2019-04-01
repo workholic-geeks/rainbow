@@ -30,8 +30,8 @@ public class FlowStrategyFactory implements FlowStrategy {
 		return emailStrategy.invokeStrategy(command);
 	}
 
-	@Bean
-	@Qualifier("startegy")
+	@Bean("strategy")
+	// @Qualifier("strategy")
 	@Scope("singleton")
 	public FlowStrategy getInstance() {
 		return new FlowStrategyFactory();

@@ -14,6 +14,26 @@ public class ApplyLoanComand implements Command {
 
 	private String comments;
 
+	private String name;
+
+	private String personEmail;
+
+	public String getPersonEmail() {
+		return personEmail;
+	}
+
+	public void setPersonEmail(String personEmail) {
+		this.personEmail = personEmail;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
 	public String getFromMailAddress() {
 		return fromMailAddress;
 	}

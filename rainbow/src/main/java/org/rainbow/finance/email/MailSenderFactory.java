@@ -10,6 +10,7 @@ import org.rainbow.finance.contracts.mail.MailFactory;
 import org.rainbow.finance.contracts.mail.MailSender;
 import org.rainbow.finance.properties.MailProperties;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
@@ -18,12 +19,17 @@ import org.springframework.context.annotation.Scope;
 public class MailSenderFactory implements MailFactory {
 
 	@Autowired
+	@Qualifier("mailProperties")
 	private MailProperties emailProps;
 
 	@Autowired
+	private MailSender mailSender;
+
+	@Autowired
+	@Qualifier("smtpSession")
 	private Session session;
 
-	@Bean
+	@Bean("mailFactory")
 	@Scope("singleton")
 	public MailFactory getInstance() {
 		return new MailSenderFactory();
@@ -31,19 +37,18 @@ public class MailSenderFactory implements MailFactory {
 
 	@Override
 	public MailSender getMailSender() {
-
-		MailSender sender = new EmailSender();
-		sender.setSessio(session);
-		return sender;
+		mailSender.setSessio(session);
+		return mailSender;
 	}
 
-	@Bean
+	@Bean("smtpSession")
 	@Scope("singleton")
 	public Session createSession() {
 
 		return Session.getInstance(initMailHostProps(), new Authenticator() {
 			@Override
 			protected PasswordAuthentication getPasswordAuthentication() {
+				System.out.println(emailProps.getPassword());
 				return new PasswordAuthentication(emailProps.getFromMail(), emailProps.getPassword());
 			}
 		});
