@@ -1,0 +1,14 @@
+#--smtp server address--
+mail.smtp.starttls.enable=true
+mail.smtp.auth=true
+mail.smtp.port=587
+mail.smtp.host=smtp.gmail.com
+
+#--Mail Prop--
+
+mail.from.address=workholic@gmail.com
+mail.to.address=workholic@gmail.com
+mail.subject.title=Requesting to contact us.
+mail.password=########
+
+

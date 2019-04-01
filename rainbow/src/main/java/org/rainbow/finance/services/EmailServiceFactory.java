@@ -1,7 +1,9 @@
 package org.rainbow.finance.services;
 
 import org.rainbow.finance.contracts.command.Command;
+import org.rainbow.finance.contracts.mail.MailFactory;
 import org.rainbow.finance.contracts.services.EmailService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
@@ -16,6 +18,9 @@ import org.springframework.context.annotation.Scope;
 @Configuration
 public class EmailServiceFactory implements EmailService {
 
+	@Autowired
+	private MailFactory mailFactory;
+
 	@Bean
 	@Scope("singleton")
 	public EmailService getInstance() {
@@ -23,8 +28,8 @@ public class EmailServiceFactory implements EmailService {
 	}
 
 	@Override
-	public void sendMessage(Command comaCommand) {
-		
+	public void sendMessage(Command command) {
+		mailFactory.getMailSender().sendMail(command);
 	}
 
 }

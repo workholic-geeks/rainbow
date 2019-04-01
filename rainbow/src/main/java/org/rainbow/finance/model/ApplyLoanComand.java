@@ -22,8 +22,8 @@ public class ApplyLoanComand implements Command {
 		this.fromMailAddress = fromMailAddress;
 	}
 
-	public String getToMailAddress() {
-		return toMailAddress;
+	public String[] getToMailAddress() {
+		return toMailAddress.split(";");
 	}
 
 	public void setToMailAddress(String toMailAddress) {

@@ -27,7 +27,7 @@ public interface Command {
 	 * 
 	 * @return
 	 */
-	public String getToMailAddress();
+	public String[] getToMailAddress();
 
 	/**
 	 * set the to address.
