@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="custom.css">
+</head>
+<body>
+
+<button class="open-button-callback" onclick="openForm()"><img src="call_back.png" class="image-width"></button>
+
+<div class="form-popup" id="myForm" >
+  <form action="/action_page.php" class="form-container">
+  
+       <div class=form-group  ">
+						<div class="select-wrapper">
+						<select data-drupal-selector="edit-city"
+							class="form-select required form-control  " id="edit-city"
+							name="city" required="required" aria-required="true" ><option
+								value="" selected="selected">Select your city</option>
+							<option value="Lusaka">Lusaka</option>
+							<option value="Ndola">Ndola</option>
+							<option value="Kitwe">Kitwe</option>
+							<option value="Kabwe">Kabwe</option>
+							<option value="Chingola">Chingola</option>
+							<option value="Mufulira">Mufulira</option>
+							</select>
+					</div>
+				</div>	
+
+        		<div class="form-group  ">
+						<input name="li_display_name" id="li_display_name"
+						class="form-input-height form-control font12 radius-5 text-darkgrey font-weight400 text-capitalize  GAnalytica_Text  "
+						maxlength="50" placeholder="Enter your full name" value="" type="text" required >
+				</div>
+				<div class="form-group  ">
+					<input name="li_display_name" id="li_display_name"
+					class="form-input-height form-control font12 radius-5 text-darkgrey font-weight400 text-capitalize  GAnalytica_Text"
+					maxlength="50" placeholder="Enter your mobile number" value="" type="text" required>
+			</div>
+			
+			<div class="form-group  ">
+					<input name="li_display_name" id="li_display_name" type="email"
+					class="form-input-height form-control font12 radius-5 text-darkgrey font-weight400 text-capitalize  GAnalytica_Text"
+					maxlength="50" placeholder="Enter your email ID" value="" type="text" required>
+			</div>
+            <button type="submit" class="btn btn-primary full-width padding">Submit</button>
+    <button type="button" class="btn cancel padding" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+</body>
+</html>
