@@ -1,0 +1,198 @@
+<html>
+<head>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.1/bootstrap-slider.js"></script>
+
+<script>
+	function emi() {
+		var pay1 = '';
+		var princ1 = document.getElementById('displayLoanAmount').value;
+		var term1 = document.getElementById('displayRepaymentmonth').value;
+		var intr1 = document.getElementById('displayInterest').value / 1200;
+		document.getElementById('pay1').value = Math.round(princ1 * intr1
+				/ (1 - (Math.pow(1 / (1 + intr1), term1))) * 100) / 100;
+		/*document.getElementById('gt1').value = Math.round((document
+				.getElementById('pay1').value * document
+				.getElementById('displayRepaymentmonth').value) * 100) / 100;
+		document.getElementById('tintt1').value = Math.round((document
+				.getElementById('gt1').value * 1 - document
+				.getElementById('displayLoanAmount').value * 1) * 100) / 100;*/
+	}
+	function displayValue() {
+		var slider = document.getElementById("loan1");
+		var output = document.getElementById("displayLoanAmount");
+		output.value = slider.value;
+	}
+	function displaymonth() {
+		var slider = document.getElementById("months1");
+		var output = document.getElementById("displayRepaymentmonth");
+		output.value = slider.value;
+		
+	}
+	function displayRate() {
+		var slider = document.getElementById("rate1");
+		var output = document.getElementById("displayInterest");
+		output.value = slider.value;
+		
+	}
+	function calculteEMI(){
+	emi();
+	var displayButtonInterest = document.getElementById("displayButtonInterest");
+	displayButtonInterest.value = document.getElementById("displayInterest").value;
+	var displayButtonMonth = document.getElementById("displayButtonMonth");
+	displayButtonMonth.value = document.getElementById("displayRepaymentmonth").value;
+	var displayButtonAmount = document.getElementById("displayButtonAmount");
+	displayButtonAmount.value = document.getElementById("displayLoanAmount").value;
+	}
+</script>
+</head>
+<style>
+
+#emi-header {
+   
+    margin: -1px 0 0 -1px;
+    height: 40px;
+    padding: 0;
+    border: 0 none;
+}
+
+.slider {
+	-webkit-appearance: none;
+	width: 100%;
+	height: 10px;
+	border-radius: 5px;
+	background: #d3d3d3;
+	outline: none;
+	opacity: 0.7;
+	-webkit-transition: .2s;
+	transition: opacity .2s;
+}
+
+.slider:hover {
+	opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 23px;
+	height: 24px;
+	border: 0;
+	background: url('contrasticon.png');
+	cursor: pointer;
+}
+
+/*.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}*/
+.slider::-moz-range-thumb {
+	width: 23px;
+	height: 24px;
+	border: 0;
+	background: url('contrasticon.png');
+	cursor: pointer;
+}
+span.max {
+    position: absolute;
+    right: 17px;
+}
+</style>
+<body>
+	<h2 id="emi-header">Rainbow Capitals EMI Calculator</h2>
+		<form class="col-xs-6 col-sm-6 no-pad">
+			<div class="form-group">
+			<label>Loan Amount</label>
+			<div class="form-group">
+				<div class="input-group">
+					<span class="input-group-addon"> <span
+						class="glyphicon glyphicon-rupee">K</span>
+					</span> <input type="text" id="displayLoanAmount" class="form-control "
+						tabindex="1" placeholder="Loan Amount">
+				</div>
+			</div>
+			<div>
+				<input type="range" onchange="displayValue()" class="slider" min="0"
+					max="5000000" step="5000" id="loan1">
+					<span class="min">K 0</span>
+					<span class="max">K 5,000,000</span>
+			</div>
+
+		</div>
+		<div class="form-group">
+			<label class="control-label">Loan Tenure(Months)</label>
+			<div class="form-group">
+				<div class="input-group">
+					<span class="input-group-addon"> <span
+						class="glyphicon glyphicon-time"></span>
+					</span> <input type="text" id="displayRepaymentmonth"
+						class="form-control" tabindex="3" placeholder="Loan Tenure">
+				</div>
+			</div>
+			<div>
+				<input type="range" onchange="displaymonth()" class="slider"
+					min="1" max="360" step="1" id="months1">
+					<span class="min">1 Month</span>
+					<span class="max">360 Month</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="form-group">
+			<label class="control-label">Rate of interest</label>
+			<div class="form-group">
+				<div class="input-group">
+					<span class="input-group-addon"> <span
+						class="glyphicon glyphicon-percent">%</span>
+					</span>
+					<div>
+						<input type="text" id="displayInterest" class="form-control"
+							tabindex="2" placeholder="Interest Rate">
+					</div>
+				</div>
+			</div>
+			<input type="range" onchange="displayRate()" class="slider" min="0"
+				max="50" step="0.05" id="rate1">
+				<span class="min">0%</span>
+				<span class="max">50%</span>
+		</div>
+		<div class="alert alert-info col-md-12">
+
+			<button type=reset class="btn btn-success btn-lg">Reset</button>
+			<button type=button onclick='calculteEMI()' class="btn btn-success btn-lg">Submit</button>
+		</div>
+	</form>
+
+
+
+
+	<div class="alert alert-info col-md-6 col-sm-6">
+		<strong>Equated Monthly Instalment</strong><br> <input
+			class="btn btn-success btn-lg" id="pay1" value="8,413.90"
+			type="button"></input><br>
+	</div>
+	<div class="alert alert-info col-md-6 col-sm-6">
+		<strong>Loan Amount</strong><br> <input
+			class="btn btn-warning btn-lg" value="42,900.53" id="displayButtonAmount"
+			type="button"></input><br>
+	</div>
+	<div class="alert alert-info col-md-6 col-sm-6">
+		<strong>Loan Tenure(Months)</strong><br> <input
+			class="btn btn-info btn-lg" value="302,900.53" id="displayButtonMonth" type="button"></input><br>
+	</div>
+	<div class="alert alert-info col-md-6 col-sm-6">
+		<strong>Interest Percentage</strong><br> <input
+			class="btn btn-info btn-lg" value="14.16 %" id="displayButtonInterest"
+			type="button"></input><br>
+	</div>
+	
+
+</body>
+</html>
