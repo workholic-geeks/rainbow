@@ -31,10 +31,15 @@ background: white;
 }
 
 @media only screen and (max-width: 991px) {
-  .applyForm {
-/*    background:#E3E2E2; */
-background: white;
-  }  
+   .applyForm {
+	/*    background:#E3E2E2; */
+	background: white;
+	  }  
+	  <!-- to disable loan content-->
+	.loan-content{
+		   display: none;
+	}
+	  
 }
 
 .margin-bottom
