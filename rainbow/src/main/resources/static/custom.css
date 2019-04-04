@@ -22,16 +22,18 @@ width: 100%;
 }
 @media only screen and (min-width: 991px) {
   .applyForm {
-   width:25%;
+   width:100%;
    hight:60%;
-   background:#E3E2E2;
+/*    background:#E3E2E2; */
 /*    #D7D0D0 */
+background: white;
   }  
 }
 
 @media only screen and (max-width: 991px) {
   .applyForm {
-   background:#E3E2E2;
+/*    background:#E3E2E2; */
+background: white;
   }  
 }
 
