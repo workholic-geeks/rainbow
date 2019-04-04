@@ -4,6 +4,6 @@ import org.rainbow.finance.contracts.command.Command;
 
 public interface EmailService {
 
-	public void sendMessage(Command comaCommand);
+	public void sendMessage(Command comaCommand) throws Exception;
 
 }

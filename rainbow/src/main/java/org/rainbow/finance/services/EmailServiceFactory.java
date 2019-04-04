@@ -30,7 +30,7 @@ public class EmailServiceFactory implements EmailService {
 	}
 
 	@Override
-	public void sendMessage(Command command) {
+	public void sendMessage(Command command) throws Exception{
 		mailFactory.getMailSender().sendMail(command);
 	}
 

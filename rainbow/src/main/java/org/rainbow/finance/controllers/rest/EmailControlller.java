@@ -29,7 +29,7 @@ public class EmailControlller {
 	@Qualifier("strategy")
 	private FlowStrategy strategy;
 
-	@GetMapping(value = "/sendMail", produces = MediaType.APPLICATION_JSON_VALUE)
+	@GetMapping(value = "/sendMail.json", produces = MediaType.APPLICATION_JSON_VALUE)
 	public EmailResponse sendEmail(/* @RequestBody ApplyLoanComand command, */HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
 		Command command = new ApplyLoanComand();

@@ -38,24 +38,21 @@ public class EmailSender implements MailSender {
 	private Session session;
 
 	@Override
-	public void sendMail(Command command) {
-		try {
-			session.setDebug(true);
-			javax.mail.Message msg = new MimeMessage(session);
-			System.out.println(mailProperties);
-			System.out.println(mailProperties.getFromMail());
-			msg.setFrom(new InternetAddress(mailProperties.getFromMail(), false));
-			msg.setRecipients(javax.mail.Message.RecipientType.TO, InternetAddress.parse(mailProperties.getToMail()));
-			((MimeMessage) msg).setSubject(mailProperties.getMailSubject());
+	public void sendMail(Command command) throws Exception {
+		session.setDebug(true);
+		javax.mail.Message msg = new MimeMessage(session);
+		System.out.println(mailProperties);
+		System.out.println(mailProperties.getFromMail());
+		msg.setFrom(new InternetAddress(mailProperties.getFromMail(), false));
+		msg.setRecipients(javax.mail.Message.RecipientType.TO, InternetAddress.parse(mailProperties.getToMail()));
+		((MimeMessage) msg).setSubject(mailProperties.getMailSubject());
 
-			((MimeMessage) msg).setContent(engine.processHtmlTemplate(mailProperties.getMailBodyFileName(),
-					initParam(command), Locale.ENGLISH), "text/html");
-			msg.setSentDate(new Date());
-			Transport.send((javax.mail.Message) msg);
-			logger.info("Message sent..");
-		} catch (Exception e) {
-			logger.log(Level.SEVERE, "Exception", e);
-		}
+		((MimeMessage) msg).setContent(
+				engine.processHtmlTemplate(mailProperties.getMailBodyFileName(), initParam(command), Locale.ENGLISH),
+				"text/html");
+		msg.setSentDate(new Date());
+		Transport.send((javax.mail.Message) msg);
+		logger.info("Message sent..");
 	}
 
 	@Override
