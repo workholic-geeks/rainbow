@@ -11,11 +11,11 @@ public class RainbowApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
 		ApplicationContext context = SpringApplication.run(RainbowApplication.class, args);
-		for (String name : context.getBeanDefinitionNames()) {
-
-			System.out.println(name);
-
-		}
+//		for (String name : context.getBeanDefinitionNames()) {
+//
+//			System.out.println(name);
+//
+//		}
 	}
 
 	@Override
