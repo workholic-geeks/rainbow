@@ -35,7 +35,6 @@ background: white;
 	/*    background:#E3E2E2; */
 	background: white;
 	  }  
-	  <!-- to disable loan content-->
 	.loan-content{
 		   display: none;
 	}
@@ -147,7 +146,7 @@ background: white;
 .modal-content {
     width: 62%;
 }
-<!-- -->
+
 .unique-color-dark {
     background-color: #1c2331 !important;
 }
