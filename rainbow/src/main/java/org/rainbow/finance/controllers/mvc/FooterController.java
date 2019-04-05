@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class FooterController {
 
-	@GetMapping("/footer")
+	@GetMapping("/footer.html")
 	public String footer() {
 		return "footer";
 	}
