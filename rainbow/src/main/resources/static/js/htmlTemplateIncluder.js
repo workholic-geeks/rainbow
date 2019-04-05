@@ -9,7 +9,7 @@ function preLoadHeader(){
 $(document).ready(function(){
 	hostName=window.location.hostname;
 	preLoadHeader();
-	//loadFooter();
+	loadFooter();
 
 });
 
