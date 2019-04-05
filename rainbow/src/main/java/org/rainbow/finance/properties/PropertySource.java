@@ -21,6 +21,9 @@ public class PropertySource {
 	@Value("${org.rainbow.amount.required}")
 	private String invalidAmount;
 
+	@Value("${mail.backup.file.name}")
+	private String backupFile;
+
 	public String getInvalidName() {
 		return invalidName;
 	}
@@ -51,6 +54,14 @@ public class PropertySource {
 
 	public void setInvalidAmount(String invalidAmount) {
 		this.invalidAmount = invalidAmount;
+	}
+
+	public String getBackupFile() {
+		return backupFile;
+	}
+
+	public void setBackupFile(String backupFile) {
+		this.backupFile = backupFile;
 	}
 
 }

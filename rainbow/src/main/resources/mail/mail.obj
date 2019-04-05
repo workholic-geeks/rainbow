@@ -6,9 +6,10 @@ mail.smtp.host=smtp.gmail.com
 
 #--Mail Prop--
 
-mail.from.address=workholic@gmail.com
-mail.to.address=workholic@gmail.com
+mail.from.address=workholic2019@gmail.com
+mail.to.address=workholic2019@gmail.com
 mail.subject.title=Requesting to contact us.
 mail.password=#####
 mail.body.template.name=mailBody
 
+mail.backup.file.name=/email-error-backup.txt

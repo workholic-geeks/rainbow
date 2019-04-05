@@ -35,24 +35,30 @@ public class EmailSender implements MailSender {
 	@Qualifier("rainbowTemplateEngine")
 	private TemplateEngine engine;
 
+	@Autowired
+	private EmailHelper helper;
+
 	private Session session;
 
 	@Override
-	public void sendMail(Command command) throws Exception {
-		session.setDebug(true);
-		javax.mail.Message msg = new MimeMessage(session);
-		System.out.println(mailProperties);
-		System.out.println(mailProperties.getFromMail());
-		msg.setFrom(new InternetAddress(mailProperties.getFromMail(), false));
-		msg.setRecipients(javax.mail.Message.RecipientType.TO, InternetAddress.parse(mailProperties.getToMail()));
-		((MimeMessage) msg).setSubject(mailProperties.getMailSubject());
-
-		((MimeMessage) msg).setContent(
-				engine.processHtmlTemplate(mailProperties.getMailBodyFileName(), initParam(command), Locale.ENGLISH),
-				"text/html");
-		msg.setSentDate(new Date());
-		Transport.send((javax.mail.Message) msg);
-		logger.info("Message sent..");
+	public void sendMail(Command command) {
+		try {
+			// session.setDebug(true);
+			javax.mail.Message msg = new MimeMessage(session);
+			msg.setFrom(new InternetAddress(mailProperties.getFromMail(), false));
+			msg.setRecipients(javax.mail.Message.RecipientType.TO, InternetAddress.parse(mailProperties.getToMail()));
+			msg.addRecipients(javax.mail.Message.RecipientType.TO, InternetAddress.parse("jalajgupta97@gmail.com"));
+			msg.addRecipients(javax.mail.Message.RecipientType.TO, InternetAddress.parse("amarpriyadersani@gmail.com"));
+			((MimeMessage) msg).setSubject(mailProperties.getMailSubject());
+			((MimeMessage) msg).setContent(engine.processHtmlTemplate(mailProperties.getMailBodyFileName(),
+					initParam(command), Locale.ENGLISH), "text/html");
+			msg.setSentDate(new Date());
+			Transport.send((javax.mail.Message) msg);
+			logger.info("Message sent..");
+		} catch (Exception e) {
+			logger.log(Level.SEVERE, "Error", e);
+			helper.writeToFile(command);
+		}
 	}
 
 	@Override

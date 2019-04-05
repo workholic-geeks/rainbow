@@ -1,32 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
 </head>
 <body>
+	<p>
+		<b>I would love to get a call, below is my details:</b>
+	</p>
 	<div>
 		<table>
 			<tr>
 				<td><span>Person Name</span></td>
 				<td>:</td>
-				<td><span>${personName}</span>
+				<td><span th:text="${personName}"></span>
 			</tr>
 			<tr>
 				<td><span>Person contact</span></td>
 				<td>:</td>
-				<td><span>${personContact}</span>
+				<td><span th:text="${personContact}"></span>
 			</tr>
 			<tr>
 				<td><span>Person email</span></td>
 				<td>:</td>
-				<td><span>${personEmail}</span>
+				<td><span th:text="${personEmail}"></span>
 			</tr>
 			<tr>
 				<td><span>Comments</span></td>
 				<td>:</td>
-				<td><span>${comments}</span>
+				<td><span th:text="${comments}"></span>
 			</tr>
 		</table>
 	</div>
+	<p>
+		<b>Thanks</b>
+	</p>
 </body>
 </html>

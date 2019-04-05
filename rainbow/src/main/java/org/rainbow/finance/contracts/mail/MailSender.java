@@ -8,6 +8,6 @@ public interface MailSender {
 
 	public void setSessio(Session session);
 
-	public void sendMail(Command command) throws Exception;
+	public void sendMail(Command command);
 
 }

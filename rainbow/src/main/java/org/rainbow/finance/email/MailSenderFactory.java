@@ -48,7 +48,6 @@ public class MailSenderFactory implements MailFactory {
 		return Session.getInstance(initMailHostProps(), new Authenticator() {
 			@Override
 			protected PasswordAuthentication getPasswordAuthentication() {
-				System.out.println(emailProps.getPassword());
 				return new PasswordAuthentication(emailProps.getFromMail(), emailProps.getPassword());
 			}
 		});
