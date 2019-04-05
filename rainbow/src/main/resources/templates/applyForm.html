@@ -9,69 +9,84 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script
-	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="custom.css">
+<script src="customForm.js"></script>
 </head>
-<body >
-</br>
-</br>
-	<div class="container applyForm loan-form-border" id="myForm">
-	<br>
-		<h6 class="heading font14 text-darkblue font-weight700" style="color: grey">Please fill in your details to get a call from our Loan Expert!</h6>
+
+<body>
+	</br>
+	</br>
+	<div class="container applyForm loan-form-border" id="myForm"
+		style="width: 50%;">
 		<br>
-		<form action="rainbow.html">		
-				<div class=form-group  ">
-						<div class="select-wrapper">
-						<select data-drupal-selector="edit-city"
-							class="form-select required form-control  " id="edit-city"
-							name="city" required="required" aria-required="true" ><option
-								value="" selected="selected">Select your city</option>
-							<option value="Lusaka">Lusaka</option>
-							<option value="Ndola">Ndola</option>
-							<option value="Kitwe">Kitwe</option>
-							<option value="Kabwe">Kabwe</option>
-							<option value="Chingola">Chingola</option>
-							<option value="Mufulira">Mufulira</option>
-							</select>
-					</div>
-				</div>	
-		     
+		<h6 class="heading font14 text-darkblue font-weight700"
+			style="color: grey">Please fill in your details to get a call
+			from our Loan Expert!</h6>
+		<br>
+		<form name="applyform" method="POST" action="welcome.html">
+
+			<div class=form-group">
+				<div class="select-wrapper">
+					<select data-drupal-selector="edit-city"
+						class="form-select required form-control  " id="city" name="city"
+						required="required" aria-required="true"><option value=""
+							selected="selected">Select your city</option>
+						<option value="Lusaka">Lusaka</option>
+						<option value="Ndola">Ndola</option>
+						<option value="Kitwe">Kitwe</option>
+						<option value="Kabwe">Kabwe</option>
+						<option value="Chingola">Chingola</option>
+						<option value="Mufulira">Mufulira</option>
+					</select>
+				</div>
+				<font color='red'>
+					<DIV id="cityId"></DIV>
+				</font>
+			</div>
+			<br>
 			<div class="form-group  ">
-					<input name="li_display_name" id="li_display_name"
+				<input name="name" id="name"
 					class="form-input-height form-control font12 radius-5 text-darkgrey font-weight400 text-capitalize  GAnalytica_Text  "
-					maxlength="50" placeholder="Enter your full name" value="" type="text" required >
-			</div>
-			
-			<div class="form-group  ">
-					<input name="li_display_name" id="li_display_name"
-					class="form-input-height form-control font12 radius-5 text-darkgrey font-weight400 text-capitalize  GAnalytica_Text"
-					maxlength="50" placeholder="Enter your mobile number" value="" type="text" required>
-			</div>
-			
-			<div class="form-group  ">
-					<input name="li_display_name" id="li_display_name" type="email"
-					class="form-input-height form-control font12 radius-5 text-darkgrey font-weight400 text-capitalize  GAnalytica_Text"
-					maxlength="50" placeholder="Enter your email ID" value="" type="text" required>
+					maxlength="50" placeholder="Enter your full name" value=""
+					type="text" required> <font color='red'>
+					<DIV id="nameId"></DIV>
+				</font>
 			</div>
 
+			<div class="form-group  ">
+				<input name="mobileno" id="mobileno"
+					class="form-input-height form-control font12 radius-5 text-darkgrey font-weight400 text-capitalize  GAnalytica_Text"
+					maxlength="50" placeholder="Enter your mobile number" value=""
+					type="text" required> <font color='red'>
+					<DIV id="mobileId"></DIV>
+				</font>
+			</div>
 
+			<div class="form-group  ">
+				<input name="email" id="email" type="email"
+					class="form-input-height form-control font12 radius-5 text-darkgrey font-weight400 text-capitalize  GAnalytica_Text"
+					maxlength="50" placeholder="Enter your email ID" value=""
+					type="text" required> <font color='red'>
+					<DIV id="emailId"></DIV>
+				</font>
+			</div>
 
 			<div
 				class="form-item js-form-item form-type-textarea js-form-type-textarea form-item-interactiondetails js-form-item-interactiondetails form-group">
 				<div class="form-textarea-wrapper">
 					<textarea data-drupal-selector="edit-interactiondetails"
 						class="form-textarea form-control resize-vertical"
-						id="edit-interactiondetails" name="interactiondetails" rows="1"
-						cols="60" placeholder="Write a Query"></textarea>
+						id="query-query" name="query" rows="1" cols="60"
+						placeholder="Write a Query"></textarea>
 				</div>
 
 			</div>
+			<div></div>
 
-
-			<button type="submit" class="btn btn-primary full-width">Submit</button>
-				</br> </br>
+			<button type="submit" onclick="formValidate()"
+				class="btn btn-primary full-width">Submit</button>
+			</br> </br>
 		</form>
 	</div>
 

@@ -23,7 +23,7 @@ width: 100%;
 @media only screen and (min-width: 991px) {
   .applyForm {
    width:100%;
-   hight:60%;
+   height:60%;
 /*    background:#E3E2E2; */
 /*    #D7D0D0 */
 background: white;
@@ -31,10 +31,14 @@ background: white;
 }
 
 @media only screen and (max-width: 991px) {
-  .applyForm {
-/*    background:#E3E2E2; */
-background: white;
-  }  
+   .applyForm {
+	/*    background:#E3E2E2; */
+	background: white;
+	  }  
+	.loan-content{
+		   display: none;
+	}
+	  
 }
 
 .margin-bottom
@@ -142,7 +146,7 @@ background: white;
 .modal-content {
     width: 62%;
 }
-<!-- -->
+
 .unique-color-dark {
     background-color: #1c2331 !important;
 }
