@@ -28,6 +28,11 @@ width: 100%;
 /*    #D7D0D0 */
 background: white;
   }  
+  .side-call-logo
+  {
+	  margin-left: 87%;
+	  margin-top: 17%;
+  } 
 }
 
 @media only screen and (max-width: 991px) {
@@ -38,6 +43,11 @@ background: white;
 	.loan-content{
 		   display: none;
 	}
+	.side-call-logo
+  {
+	   margin-left: 75%;
+	  margin-top: 40%;
+  } 
 	  
 }
 
@@ -47,8 +57,10 @@ background: white;
 }
 .image-width
 {
-	width:150px;
+	width:60%;
+	heigth:50%;
 }
+
 .image-logo
 {
  width:10%;
