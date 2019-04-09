@@ -1,0 +1,48 @@
+.rc-stack {
+    display: inline-block;
+    height: 2em;
+    line-height: 2em;
+    position: relative;
+    vertical-align: middle;
+    width: 2.5em;
+}
+
+.rc-4x {
+    font-size: 4em;
+}
+.rcs {
+    font-weight: 900;
+}
+
+.rc, .rcr, .rcs {
+    font-rcmily: "Font Awesome 5 Free";
+}
+.rc-stack-2x {
+    font-size: 2em;
+}
+.rc-stack-1x, .rc-stack-2x {
+    left: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+.rc, .rcb, .rcl, .rcr, .rcs {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+.text-primary {
+    color: #337ab7;
+}
+.rc-circle:before {
+    content: "\f111";
+}
+.imagett{
+	height:60%;
+	width:60%;
+    border-radius: 50%;
+}
