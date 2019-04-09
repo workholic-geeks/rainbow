@@ -30,9 +30,19 @@ background: white;
   }  
   .side-call-logo
   {
-	  margin-left: 87%;
+	  margin-left: 90%;
 	  margin-top: 17%;
   } 
+  .image-width-for-callback
+   {
+	width:13%;
+	height:26%;
+   }
+	.image-width-for-missedcall
+	{
+		width:70%;
+		height:70%;
+	}
 }
 
 @media only screen and (max-width: 991px) {
@@ -43,24 +53,30 @@ background: white;
 	.loan-content{
 		   display: none;
 	}
-	.side-call-logo
-  {
-	   margin-left: 75%;
-	  margin-top: 40%;
-  } 
-	  
+  .side-call-logo
+	  {
+		   margin-left: 70%;
+		  margin-top: 40%;
+	  } 
+  .image-width-for-callback
+	{
+		width:35%;
+		height:20%;
+	}
+	.image-width-for-missedcall
+	{
+		width:50%;
+		height:50%;
+	}
+	.modal-content {
+    width: 80%;
+}
 }
 
 .margin-bottom
 {
 	margin-bottom:13px;
 }
-.image-width
-{
-	width:60%;
-	heigth:50%;
-}
-
 .image-logo
 {
  width:10%;
@@ -156,7 +172,7 @@ background: white;
 }
 
 .modal-content {
-    width: 62%;
+    width: 52%;
 }
 
 .unique-color-dark {
