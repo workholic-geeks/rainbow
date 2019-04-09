@@ -1,6 +1,6 @@
 
 <div class="container">
-	<i><p class="loan-content" style="color: black;">Rainbow
+	<br> <i><p class="loan-content" style="color: black;">Rainbow
 			Capital Ltd is a unique micro lending company with total flexibility
 			in its DNA. The company offers Flexible Education Loans, Flexible
 			Medical Loans, Flexible Consumption Loans and many more Flexible
@@ -12,16 +12,17 @@
 			<img src="contactusImage.jpg" style="width: 100%; height: 100%">
 		</div>
 		<div class="col-sm-5" style="background-color: white;">
-			<div class="container applyForm loan-form-border col-sm-8"
+			<div class="container applyForm col-sm-8 loan-form-border"
 				id="myForm" style="border-width: 0px;">
-				<i><h4 class="heading" style="color: #3A4792">Please fill
-						in your details to get a call from our Loan Expert!</h4></i> <br>
+				<br> <i><h4 class="heading" style="color: #3A4792">Please
+						fill in your details to get a call from our Loan Expert!</h4></i> <br>
+				<br>
 				<form name="applyform" method="POST" action="welcome.html">
 
 					<div class="form-group">
 						<div class="select-wrapper">
 							<select data-drupal-selector="edit-city"
-								class="form-select required form-control  " id="city"
+								class="form-select required form-control  " id="edit-city"
 								name="city" required="required" aria-required="true"><option
 									value="" selected="selected">Select your city</option>
 								<option value="Lusaka">Lusaka</option>
@@ -32,36 +33,25 @@
 								<option value="Mufulira">Mufulira</option>
 							</select>
 						</div>
-						<font color='red'>
-							<DIV id="cityId"></DIV>
-						</font>
 					</div>
-					<br>
 					<div class="form-group  ">
-						<input name="name" id="name"
+						<input name="li_display_name" id="li_display_name"
 							class="form-input-height form-control font12 radius-5 text-darkgrey font-weight400 text-capitalize  GAnalytica_Text  "
 							maxlength="50" placeholder="Enter your full name" value=""
-							type="text" required> <font color='red'>
-							<DIV id="nameId"></DIV>
-						</font>
+							type="text" required>
 					</div>
-
 					<div class="form-group  ">
-						<input name="mobileno" id="mobileno"
+						<input name="li_display_name" id="li_display_name"
 							class="form-input-height form-control font12 radius-5 text-darkgrey font-weight400 text-capitalize  GAnalytica_Text"
 							maxlength="50" placeholder="Enter your mobile number" value=""
-							type="text" required> <font color='red'>
-							<div id="mobileId"></div>
-						</font>
+							type="text" required>
 					</div>
 
 					<div class="form-group  ">
-						<input name="email" id="email" type="email"
+						<input name="li_display_name" id="li_display_name"
 							class="form-input-height form-control font12 radius-5 text-darkgrey font-weight400 text-capitalize  GAnalytica_Text"
 							maxlength="50" placeholder="Enter your email ID" value=""
-							type="text" required> <font color='red'>
-							<div id="emailId"></div>
-						</font>
+							type="text" required>
 					</div>
 
 					<div
@@ -74,7 +64,6 @@
 						</div>
 
 					</div>
-					<div></div>
 					<br>
 					<button type="submit" onclick="formValidate()"
 						class="btn btn-primary full-width">Submit</button>
