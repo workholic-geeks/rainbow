@@ -67,12 +67,12 @@ background: white;
 	  } 
   .image-width-for-callback
 	{
-		width:35%;
+		width:100%;
 		height:20%;
 	}
 	.image-width-for-missedcall
 	{
-		width:50%;
+		width:100%;
 		height:50%;
 	}
 	.modal-content {

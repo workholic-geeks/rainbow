@@ -9,6 +9,7 @@ function preLoadHeader(){
 $(document).ready(function(){
 	hostName=window.location.hostname;
 	preLoadHeader();
+	homePage();
 	callIconLoader();
 	loadFooter();
 
@@ -21,6 +22,11 @@ function loadFooter(){
 function callIconLoader(){
 	var url="http://"+hostName+":8080"+"/calllogoinallpages.html";
 	$("#calllogoinallpages").load(url);
+}
+
+function homePage(){
+	var url="http://"+hostName+":8080"+"/homepage.html";
+	$("#homepage").load(url);
 }
 
 function loadAboutUs(){
