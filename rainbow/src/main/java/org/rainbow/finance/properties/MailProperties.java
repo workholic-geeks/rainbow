@@ -36,6 +36,9 @@ public class MailProperties {
 
 	@Value("${mail.body.template.name}")
 	private String mailBodyFileName;
+	
+	@Value("${mail.backup.file.dir}")
+	private String backupDir;
 
 	public Boolean getStarttlsEnabled() {
 		return starttlsEnabled;
@@ -107,6 +110,14 @@ public class MailProperties {
 
 	public void setMailBodyFileName(String mailBodyFileName) {
 		this.mailBodyFileName = mailBodyFileName;
+	}
+
+	public String getBackupDir() {
+		return backupDir;
+	}
+
+	public void setBackupDir(String backupDir) {
+		this.backupDir = backupDir;
 	}
 
 }

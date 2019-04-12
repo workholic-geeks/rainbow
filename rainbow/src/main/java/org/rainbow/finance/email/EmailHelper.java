@@ -8,6 +8,7 @@ import java.util.logging.Logger;
 
 import org.rainbow.finance.contracts.command.Command;
 import org.rainbow.finance.file.FilesUtility;
+import org.rainbow.finance.properties.MailProperties;
 import org.rainbow.finance.properties.PropertySource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -23,20 +24,28 @@ public class EmailHelper {
 	@Autowired
 	private PropertySource props;
 
+	@Autowired
+	private MailProperties mailProps;
+
 	public void writeToFile(Command command) {
 		BufferedWriter writer = null;
 		try {
 
 			if (!utility.checkFileExists(props.getBackupFile())) {
-				writer = new BufferedWriter(new OutputStreamWriter(utility.createFile(props.getBackupFile())));
+				writer = new BufferedWriter(
+						new OutputStreamWriter(utility.createFile(mailProps.getBackupDir(), props.getBackupFile())));
 
 			} else {
-				writer = new BufferedWriter(new OutputStreamWriter(utility.getOutputStream(props.getBackupFile())));
+				writer = new BufferedWriter(new OutputStreamWriter(
+						utility.getOutputStream(mailProps.getBackupDir(), props.getBackupFile())));
 			}
 			StringBuffer buffer = new StringBuffer();
 			buffer.append("Name:" + command.getName());
+			buffer.append(";");
 			buffer.append("Phone No:" + command.getPhoneNumber());
+			buffer.append(";");
 			buffer.append("Email:" + command.getPersonEmail());
+			buffer.append(";");
 			buffer.append("Comments:" + command.getPersonEmail());
 			writer.write(buffer.toString());
 			writer.newLine();

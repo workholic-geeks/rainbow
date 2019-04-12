@@ -13,9 +13,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 @Configuration
+@Component
 public class MailSenderFactory implements MailFactory {
 
 	@Autowired
@@ -29,6 +32,7 @@ public class MailSenderFactory implements MailFactory {
 	@Qualifier("smtpSession")
 	private Session session;
 
+	@Primary
 	@Bean("mailFactory")
 	@Scope("singleton")
 	public MailFactory getInstance() {

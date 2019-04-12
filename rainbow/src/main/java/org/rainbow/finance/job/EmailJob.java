@@ -16,6 +16,7 @@ import org.rainbow.finance.contracts.job.Job;
 import org.rainbow.finance.email.EmailSenderWork;
 import org.rainbow.finance.file.FilesUtility;
 import org.rainbow.finance.model.ApplyLoanComand;
+import org.rainbow.finance.properties.MailProperties;
 import org.rainbow.finance.properties.PropertySource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -35,6 +36,9 @@ public class EmailJob implements Job {
 	private PropertySource emailProp;
 
 	@Autowired
+	private MailProperties mailProp;
+
+	@Autowired
 	private EmailSenderWork work;
 
 	private Logger logger = Logger.getLogger(this.getClass().getName());
@@ -43,15 +47,15 @@ public class EmailJob implements Job {
 	 * This will execute every day at 3pm
 	 * 
 	 */
-	@Scheduled(cron = "0 15 * * * ?")
+	@Scheduled(cron = "0 * * * * ?")
 	@Override
 	public void execute() {
 		logger.info("-----------Starting Email job----------");
 		logger.info("Email back-up file name: " + emailProp.getBackupFile());
-		if (filesUtility.checkFileExists(emailProp.getBackupFile())) {
+		if (filesUtility.checkFileExists(mailProp.getBackupDir(), emailProp.getBackupFile())) {
 			logger.info("Reading back-up file.");
 			try {
-				InputStream stream = filesUtility.readFile(emailProp.getBackupFile());
+				InputStream stream = filesUtility.readFile(mailProp.getBackupDir(), emailProp.getBackupFile());
 				BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
 				String line = null;
 				while ((line = reader.readLine()) != null) {
@@ -60,7 +64,6 @@ public class EmailJob implements Job {
 				}
 				stream.close();
 				stream = null;
-				filesUtility.readFile(emailProp.getBackupFile());
 				executeEmailThread();
 			} catch (Exception e) {
 				logger.log(Level.SEVERE, "ERROR", e);

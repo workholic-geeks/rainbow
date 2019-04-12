@@ -54,7 +54,9 @@ public class EmailSender implements MailSender {
 					initParam(command), Locale.ENGLISH), "text/html");
 			msg.setSentDate(new Date());
 			Transport.send((javax.mail.Message) msg);
-			logger.info("Message sent..");
+			logger.info("--Email sent--");
+			session.getTransport().close();
+			logger.info("--clossing transport--");
 		} catch (Exception e) {
 			logger.log(Level.SEVERE, "Error", e);
 			helper.writeToFile(command);
