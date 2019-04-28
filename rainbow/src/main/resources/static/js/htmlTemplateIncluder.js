@@ -26,7 +26,7 @@ function callIconLoader(){
 
 function homePage(){
 	var url="http://"+hostName+":8080"+"/homepage.html";
-	$("#homepage").load(url);
+	$("#welcome").load(url);
 }
 
 function loadAboutUs(){
@@ -41,6 +41,12 @@ function loadCalculator(){
 
 function loadContactUs(){
 	var url="http://"+hostName+":8080"+"/contactUSForm.html";
+	$("#welcome").empty();
+	$("#welcome").load(url);
+}
+
+function loadFaq(){
+	var url="http://"+hostName+":8080"+"/faq.html";
 	$("#welcome").empty();
 	$("#welcome").load(url);
 }

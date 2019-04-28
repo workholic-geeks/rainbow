@@ -365,7 +365,6 @@ input: -webkit-autofill:focus {
 
 /*Welcome Section*/
 #welcome {
-    min-height: 350px;
     background: #fff;
     padding: 80px 0;
 }
