@@ -1,13 +1,12 @@
 var hostName;
 
-function preLoadHeader(){
-	var url="http://"+hostName+":8080"+"/header.html";
+function preLoadHeader() {
+	var url = "http://" + hostName + ":8080" + "/header.html";
 	$("#header").load(url);
 }
 
-
-$(document).ready(function(){
-	hostName=window.location.hostname;
+$(document).ready(function() {
+	hostName = window.location.hostname;
 	preLoadHeader();
 	homePage();
 	callIconLoader();
@@ -15,38 +14,117 @@ $(document).ready(function(){
 
 });
 
-function loadFooter(){
-	var url="http://"+hostName+":8080"+"/footer.html";
+function loadFooter() {
+	var url = "http://" + hostName + ":8080" + "/footer.html";
+	$("#homepage").empty();
 	$("#footer").load(url);
 }
-function callIconLoader(){
-	var url="http://"+hostName+":8080"+"/calllogoinallpages.html";
+function callIconLoader() {
+	var url = "http://" + hostName + ":8080" + "/calllogoinallpages.html";
+	$("#homepage").empty();
 	$("#calllogoinallpages").load(url);
 }
 
-function homePage(){
-	var url="http://"+hostName+":8080"+"/homepage.html";
+function homePage() {
+	var url = "http://" + hostName + ":8080" + "/homepage.html";
 	$("#welcome").load(url);
+	removeAll();
+	$("#homepage").empty();
+	active("#homeLink");
 }
 
-function loadAboutUs(){
+function loanProducts() {
 	$("#welcome").load("");
-}	
-
-function loadCalculator(){
-	var url="http://"+hostName+":8080"+"/emiCalculator.html";
-	$("#welcome").empty();
-	$("#welcome").load(url);
+	removeAll();
+	$("#homepage").empty();
+	active("#loanProduct");
 }
 
-function loadContactUs(){
-	var url="http://"+hostName+":8080"+"/contactUSForm.html";
+function loadCalculator() {
+	$("#homepage").empty();
+	var url = "http://" + hostName + ":8080" + "/emiCalculator.html";
 	$("#welcome").empty();
 	$("#welcome").load(url);
+	removeAll();
+	
+	active("#calculatorLink");
 }
 
-function loadFaq(){
-	var url="http://"+hostName+":8080"+"/faq.html";
+function loadContactUs() {
+	$("#homepage").empty();
+	var url = "http://" + hostName + ":8080" + "/contactUSForm.html";
 	$("#welcome").empty();
 	$("#welcome").load(url);
+	removeAll();
+	active("#contactUsLink");
+}
+
+function loadFaq() {
+	$("#homepage").empty();
+	var url = "http://" + hostName + ":8080" + "/faq.html";
+	$("#welcome").empty();
+	$("#welcome").load(url);
+	removeAll();
+	active("#faqLink");
+}
+function loadShortTermLoan(){
+	$("#calllogoinallpages").load("http://" + hostName + ":8080" + "/emiCalculator.html",function(){
+		$("#rateOfInterest").hide();
+		var output = document.getElementById("displayInterest");
+		output.value = 42;
+		$("#displayRepaymentmonth").val(6);
+		$("#displayLoanAmount").val(5000);
+		calculteEMI();
+	});
+	var url = "http://" + hostName + ":8080" + "/shortTermLoan.html";
+	$("#welcome").empty();
+	$("#welcome").load("http://" + hostName + ":8080" + "/shortTermSlider.html",function(){
+		slideIndex=0;
+		showSlides();
+	});
+	$("#homepage").empty();
+	$("#homepage").load(url);
+	removeAll();
+	
+}
+function loadLongTermLoan(){
+	$("#calllogoinallpages").load("http://" + hostName + ":8080" + "/emiCalculator.html",function(){
+		$("#rateOfInterest").hide();
+		var output = document.getElementById("displayInterest");
+		output.value = 42;
+		$("#displayRepaymentmonth").val(24);
+		$("#displayLoanAmount").val(10000);
+		calculteEMI();
+	});
+	var url = "http://" + hostName + ":8080" + "/longTermLoan.html";
+	$("#welcome").empty();
+	$("#welcome").load("http://" + hostName + ":8080" + "/shortTermSlider.html",function(){
+		slideIndex=0;
+		showSlides(0);
+	});
+	$("#homepage").empty();
+	$("#homepage").load(url);
+	removeAll();
+	
+}
+function loadMediumTermLoan(){
+	$("#calllogoinallpages").load("http://" + hostName + ":8080" + "/emiCalculator.html",function(){
+		$("#rateOfInterest").hide();
+		var output = document.getElementById("displayInterest");
+		output.value = 42;
+		//$("#displayInterest").val(42);
+		$("#displayRepaymentmonth").val(12);
+		$("#displayLoanAmount").val(10000);
+		calculteEMI();
+	});
+	var url = "http://" + hostName + ":8080" + "/mediumTermLoan.html";
+	$("#welcome").empty();
+	$("#welcome").load("http://" + hostName + ":8080" + "/shortTermSlider.html",function(){
+		slideIndex=0;
+		showSlides(0);
+	});
+	$("#homepage").empty();
+	$("#homepage").load(url);
+	removeAll();
+	
 }

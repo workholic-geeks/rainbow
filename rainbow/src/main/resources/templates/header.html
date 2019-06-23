@@ -1,3 +1,4 @@
+
 <div class="header-area">
                 <div class="top_header">
                     <div class="container">
@@ -49,11 +50,17 @@
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse zero_mp" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav navbar-right main_menu">
-                                    <li class="active"><a href="#header">Home <span class="sr-only">(current)</span></a></li>
-                                    <li onclick="loadAboutUs()"><a href="#welcome">Loan Products</a></li>
-                                    <li onclick="loadCalculator()"><a href="#welcome">Checklist & Calculators</a></li>
-                                    <li><a onclick="loadFaq()" href="#welcome">FAQ</a></li>
-                                    <li onclick="loadContactUs()"><a href="#welcome">Contact Us</a></li>
+                                    <li id="homeLink" onclick="homePage()" ><a href="#home">Home </a></li><!-- class="active" <span class="sr-only">(current)</span> -->
+                                    <li  class="loanProduct" id="loanProduct" ><a href="#loanProducts">Loan Products</a>
+                                    <div class="loanProductsDropDown">
+                                    <ul>
+                                    <li id="shortTermLoan" ><a onclick="loadShortTermLoan()" href="#shortTermLoan">Short Term Loan</a></li>
+                                    <li id="mediumTermLoan" ><a onclick="loadMediumTermLoan()" href="#MediumTermLoan">Medium Term Loan</a></li>
+                                    <li id="longTermLoan" ><a onclick="loadLongTermLoan()" href="#LongTermLoan">Long Term Loan</a></li></ul>
+                                    </div></li>
+                                    <li  id="calculatorLink" onclick="loadCalculator()"><a href="#calculator">Checklist & Calculators</a></li>
+                                    <li id="faqLink" ><a onclick="loadFaq()" href="#faq">FAQ</a></li>
+                                    <li  id="contactUsLink" onclick="loadContactUs()"><a href="#contactUs">Contact Us</a></li>
                                 </ul>
                             </div>
                             <!-- /.navbar-collapse -->
