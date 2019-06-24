@@ -80,7 +80,17 @@ function loadShortTermLoan(){
 	$("#welcome").empty();
 	$("#welcome").load("http://" + hostName + ":8080" + "/shortTermSlider.html",function(){
 		slideIndex=0;
-		showSlides();
+		//showSlides();
+		$("#slideshow > div:gt(0)").hide();
+
+		setInterval(function() { 
+		  $('#slideshow > div:first')
+		    .fadeOut(1000)
+		    .next()
+		    .fadeIn(1000)
+		    .end()
+		    .appendTo('#slideshow');
+		},  3000);
 	});
 	$("#homepage").empty();
 	$("#homepage").load(url);
