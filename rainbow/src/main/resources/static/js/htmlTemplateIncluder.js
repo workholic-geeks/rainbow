@@ -79,8 +79,6 @@ function loadShortTermLoan(){
 	var url = "http://" + hostName + ":8080" + "/shortTermLoan.html";
 	$("#welcome").empty();
 	$("#welcome").load("http://" + hostName + ":8080" + "/shortTermSlider.html",function(){
-		slideIndex=0;
-		//showSlides();
 		$("#slideshow > div:gt(0)").hide();
 
 		setInterval(function() { 
@@ -91,10 +89,11 @@ function loadShortTermLoan(){
 		    .end()
 		    .appendTo('#slideshow');
 		},  3000);
+		removeAll();
+		active("#shortTermLoan");
 	});
 	$("#homepage").empty();
 	$("#homepage").load(url);
-	removeAll();
 	
 }
 function loadLongTermLoan(){
@@ -108,13 +107,22 @@ function loadLongTermLoan(){
 	});
 	var url = "http://" + hostName + ":8080" + "/longTermLoan.html";
 	$("#welcome").empty();
-	$("#welcome").load("http://" + hostName + ":8080" + "/shortTermSlider.html",function(){
-		slideIndex=0;
-		showSlides(0);
+	$("#welcome").load("http://" + hostName + ":8080" + "/longTermSlider.html",function(){
+		$("#slideshow > div:gt(0)").hide();
+
+		setInterval(function() { 
+		  $('#slideshow > div:first')
+		    .fadeOut(1000)
+		    .next()
+		    .fadeIn(1000)
+		    .end()
+		    .appendTo('#slideshow');
+		},  3000);
+		removeAll();
+		active("#longTermLoan");
 	});
 	$("#homepage").empty();
 	$("#homepage").load(url);
-	removeAll();
 	
 }
 function loadMediumTermLoan(){
@@ -129,12 +137,22 @@ function loadMediumTermLoan(){
 	});
 	var url = "http://" + hostName + ":8080" + "/mediumTermLoan.html";
 	$("#welcome").empty();
-	$("#welcome").load("http://" + hostName + ":8080" + "/shortTermSlider.html",function(){
-		slideIndex=0;
-		showSlides(0);
+	$("#welcome").load("http://" + hostName + ":8080" + "/mediumTermSlider.html",function(){
+		$("#slideshow > div:gt(0)").hide();
+
+		setInterval(function() { 
+		  $('#slideshow > div:first')
+		    .fadeOut(1000)
+		    .next()
+		    .fadeIn(1000)
+		    .end()
+		    .appendTo('#slideshow');
+		},  3000);
+		removeAll();
+		active("#mediumTermLoan");
 	});
 	$("#homepage").empty();
 	$("#homepage").load(url);
-	removeAll();
+	
 	
 }

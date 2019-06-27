@@ -12,6 +12,9 @@ function removeAll() {
 	jQuery("#calculatorLink").removeClass("active");
 	jQuery("#faqLink").removeClass("active");
 	jQuery("#contactUsLink").removeClass("active");
+	jQuery("#shortTermLoan").removeClass("active");
+	jQuery("#mediumTermLoan").removeClass("active");
+	jQuery("#longTermLoan").removeClass("active");
 }
 
 /**

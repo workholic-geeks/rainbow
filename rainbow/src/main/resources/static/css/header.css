@@ -300,6 +300,7 @@
   background-color: #fff;
   min-width: 160px;
   z-index: 1;
+  min-width: 122%;
 }
 
 .loanProductsDropDown a {

@@ -25,4 +25,12 @@ public class LoanProductController {
 	public String shortTermSlider() {
 		return "autoSliderShortTermLoan.html";
 	}
+	@GetMapping(value="/mediumTermSlider.html")
+	public String mediumTermSlider() {
+		return "autoSliderMediumTermLoan.html";
+	}
+	@GetMapping(value="/longTermSlider.html")
+	public String longTermSlider() {
+		return "autoSliderLongTermLoan.html";
+	}
 }

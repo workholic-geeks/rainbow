@@ -257,7 +257,6 @@ input: -webkit-autofill, input: -webkit-autofill:hover, input: -webkit-autofill:
 	color: #393939;
 	font-size: 14px;
 	text-transform: uppercase;
-	font-weight: 600;
 	font-family: 'Roboto Slab', serif;
 }
 
@@ -1329,19 +1328,48 @@ ul.entry-meta {
 	margin-top: 2%;
 }
 
-#slideshow { 
-    margin: 50px auto; 
-    position: relative; 
-    width: 80%; 
-    height: 400px; 
-    padding: 10px; 
-    box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+#slideshow {
+	margin: 50px auto;
+	position: relative;
+	width: 80%;
+	height: 400px;
+	padding: 10px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
-#slideshow > div { 
-    position: absolute; 
-    top: 10px; 
-    left: 10px; 
-    right: 10px; 
-    bottom: 10px; 
+#slideshow>div {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	right: 10px;
+	bottom: 10px;
+}
+
+#header .header_menu .navbar-default .navbar-nav>.active>a, #header .header_menu .navbar-default .navbar-nav>.active>a:focus,
+	#header .header_menu .navbar-default .navbar-nav>.active>a:hover {
+	background-color: none;
+}
+
+#header .header_menu ul.main_menu li a {
+	font-weight: none;
+}
+
+.active {
+	background-color: rgba(255, 255, 255, 0);
+}
+
+#shortTermLoanHeading {
+	margin-left: 10%;
+}
+
+#mediumTermLoanHeading {
+	margin-left: 10%;
+}
+
+#longTermLoanHeading {
+	margin-left: 10%;
+}
+
+.result.col-md-12.col-sm-12 {
+	padding: 4%;
 }

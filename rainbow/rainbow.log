@@ -1,42 +1,355 @@
-2019-06-25 00:00:27.840  INFO 14364 --- [RMI TCP Connection(4)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2019-06-25 00:00:27.858  INFO 14364 --- [RMI TCP Connection(4)-127.0.0.1] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
-2019-06-25 00:00:27.861  INFO 14364 --- [RMI TCP Connection(4)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-06-25 00:00:47.734  INFO 20300 --- [main] org.rainbow.finance.RainbowApplication   : Starting RainbowApplication on Anish with PID 20300 (C:\Users\Amiti\git\repository\work-holic\rainbow\target\classes started by Amiti in C:\Users\Amiti\git\repository\work-holic\rainbow)
-2019-06-25 00:00:47.747  INFO 20300 --- [main] org.rainbow.finance.RainbowApplication   : No active profile set, falling back to default profiles: default
-2019-06-25 00:00:50.492  INFO 20300 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-06-25 00:00:50.601  INFO 20300 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-06-25 00:00:50.603  INFO 20300 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
-2019-06-25 00:00:50.625  INFO 20300 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_162\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_162/bin/server;C:/Program Files/Java/jre1.8.0_162/bin;C:/Program Files/Java/jre1.8.0_162/lib/amd64;C:\app\Amiti\virtual\product\12.2.0\dbhome_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.8.0_162\bin;C:\WINDOWS\System32\OpenSSH\;C:\Python27;C:\Python27\Scripts;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\SlikSvn\bin;E:\oc;C:\apache-maven-3.5.2\bin;D:\jboss-eap-6.4;C:\Program Files\nodejs\;C:\Ruby25-x64\bin;C:\Users\Amiti\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\SSH Communications Security\SSH Secure Shell;C:\Program Files\Java\jdk1.8.0_162;C:\Program Files\Java\jdk1.8.0_162\bin\jar.exe;C:\Python27;C:\Python27\Scripts;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\SlikSvn\bin;E:\oc\oc.exe;C:\apache-maven-3.5.2\bin;D:\jboss-eap-6.4;C:\apache-ant-1.6.5\bin;C:\Users\Amiti\AppData\Local\GitHubDesktop\bin;C:\Users\Amiti\AppData\Roaming\npm;D:\sts-4.1.1.RELEASE;;.]
-2019-06-25 00:00:51.103  INFO 20300 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-06-25 00:00:51.104  INFO 20300 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3209 ms
-2019-06-25 00:00:51.280  INFO 20300 --- [main] org.rainbow.finance.configs.AppConfig    : ----------Initializing app custom configuration------------
-2019-06-25 00:00:51.281  INFO 20300 --- [main] org.rainbow.finance.configs.AppConfig    : ---App back-up dir backup already exists----
-2019-06-25 00:00:51.281  INFO 20300 --- [main] org.rainbow.finance.configs.AppConfig    : ----------App Initialization finished---------
-2019-06-25 00:00:51.522  INFO 20300 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-06-25 00:00:51.787  INFO 20300 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2019-06-25 00:00:51.837  INFO 20300 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
-2019-06-25 00:00:51.967  INFO 20300 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2019-06-25 00:00:51.972  INFO 20300 --- [main] org.rainbow.finance.RainbowApplication   : Started RainbowApplication in 5.293 seconds (JVM running for 7.949)
-2019-06-25 00:00:54.173  INFO 20300 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-06-25 00:00:54.174  INFO 20300 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-06-25 00:00:54.182  INFO 20300 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
-2019-06-25 00:02:16.032  INFO 20300 --- [RMI TCP Connection(3)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2019-06-25 00:02:16.035  INFO 20300 --- [RMI TCP Connection(3)-127.0.0.1] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
-2019-06-25 00:02:16.037  INFO 20300 --- [RMI TCP Connection(3)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-06-25 00:02:25.036  INFO 9264 --- [main] org.rainbow.finance.RainbowApplication   : Starting RainbowApplication on Anish with PID 9264 (C:\Users\Amiti\git\repository\work-holic\rainbow\target\classes started by Amiti in C:\Users\Amiti\git\repository\work-holic\rainbow)
-2019-06-25 00:02:25.040  INFO 9264 --- [main] org.rainbow.finance.RainbowApplication   : No active profile set, falling back to default profiles: default
-2019-06-25 00:02:26.775  INFO 9264 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-06-25 00:02:26.811  INFO 9264 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-06-25 00:02:26.812  INFO 9264 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
-2019-06-25 00:02:26.821  INFO 9264 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_162\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_162/bin/server;C:/Program Files/Java/jre1.8.0_162/bin;C:/Program Files/Java/jre1.8.0_162/lib/amd64;C:\app\Amiti\virtual\product\12.2.0\dbhome_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.8.0_162\bin;C:\WINDOWS\System32\OpenSSH\;C:\Python27;C:\Python27\Scripts;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\SlikSvn\bin;E:\oc;C:\apache-maven-3.5.2\bin;D:\jboss-eap-6.4;C:\Program Files\nodejs\;C:\Ruby25-x64\bin;C:\Users\Amiti\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\SSH Communications Security\SSH Secure Shell;C:\Program Files\Java\jdk1.8.0_162;C:\Program Files\Java\jdk1.8.0_162\bin\jar.exe;C:\Python27;C:\Python27\Scripts;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\SlikSvn\bin;E:\oc\oc.exe;C:\apache-maven-3.5.2\bin;D:\jboss-eap-6.4;C:\apache-ant-1.6.5\bin;C:\Users\Amiti\AppData\Local\GitHubDesktop\bin;C:\Users\Amiti\AppData\Roaming\npm;D:\sts-4.1.1.RELEASE;;.]
-2019-06-25 00:02:27.064  INFO 9264 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-06-25 00:02:27.065  INFO 9264 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1964 ms
-2019-06-25 00:02:27.245  INFO 9264 --- [main] org.rainbow.finance.configs.AppConfig    : ----------Initializing app custom configuration------------
-2019-06-25 00:02:27.246  INFO 9264 --- [main] org.rainbow.finance.configs.AppConfig    : ---App back-up dir backup already exists----
-2019-06-25 00:02:27.246  INFO 9264 --- [main] org.rainbow.finance.configs.AppConfig    : ----------App Initialization finished---------
-2019-06-25 00:02:27.439  INFO 9264 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-06-25 00:02:27.647  INFO 9264 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2019-06-25 00:02:27.692  INFO 9264 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
-2019-06-25 00:02:27.785  INFO 9264 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2019-06-25 00:02:27.790  INFO 9264 --- [main] org.rainbow.finance.RainbowApplication   : Started RainbowApplication in 3.303 seconds (JVM running for 4.68)
-2019-06-25 00:02:40.820  INFO 9264 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-06-26 21:02:33.954  INFO 3192 --- [main] org.rainbow.finance.RainbowApplication   : Starting RainbowApplication on Anish with PID 3192 (C:\Users\Amiti\git\repository\work-holic\rainbow\target\classes started by Amiti in C:\Users\Amiti\git\repository\work-holic\rainbow)
+2019-06-26 21:02:33.966  INFO 3192 --- [main] org.rainbow.finance.RainbowApplication   : No active profile set, falling back to default profiles: default
+2019-06-26 21:02:36.464  INFO 3192 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-06-26 21:02:36.517  INFO 3192 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-26 21:02:36.518  INFO 3192 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-06-26 21:02:36.539  INFO 3192 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_162\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_162/bin/server;C:/Program Files/Java/jre1.8.0_162/bin;C:/Program Files/Java/jre1.8.0_162/lib/amd64;C:\app\Amiti\virtual\product\12.2.0\dbhome_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.8.0_162\bin;C:\WINDOWS\System32\OpenSSH\;C:\Python27;C:\Python27\Scripts;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\SlikSvn\bin;E:\oc;C:\apache-maven-3.5.2\bin;D:\jboss-eap-6.4;C:\Program Files\nodejs\;C:\Ruby25-x64\bin;C:\Users\Amiti\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\SSH Communications Security\SSH Secure Shell;C:\Program Files\Java\jdk1.8.0_162;C:\Program Files\Java\jdk1.8.0_162\bin\jar.exe;C:\Python27;C:\Python27\Scripts;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\SlikSvn\bin;E:\oc\oc.exe;C:\apache-maven-3.5.2\bin;D:\jboss-eap-6.4;C:\apache-ant-1.6.5\bin;C:\Users\Amiti\AppData\Local\GitHubDesktop\bin;C:\Users\Amiti\AppData\Roaming\npm;D:\sts-4.1.1.RELEASE;;.]
+2019-06-26 21:02:37.273  INFO 3192 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-26 21:02:37.274  INFO 3192 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3193 ms
+2019-06-26 21:02:37.466  INFO 3192 --- [main] org.rainbow.finance.configs.AppConfig    : ----------Initializing app custom configuration------------
+2019-06-26 21:02:37.467  INFO 3192 --- [main] org.rainbow.finance.configs.AppConfig    : ---App back-up dir backup already exists----
+2019-06-26 21:02:37.467  INFO 3192 --- [main] org.rainbow.finance.configs.AppConfig    : ----------App Initialization finished---------
+2019-06-26 21:02:37.757  INFO 3192 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-26 21:02:37.979  INFO 3192 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-06-26 21:02:38.040  INFO 3192 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-06-26 21:02:38.161  INFO 3192 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-06-26 21:02:38.169  INFO 3192 --- [main] org.rainbow.finance.RainbowApplication   : Started RainbowApplication in 5.01 seconds (JVM running for 9.994)
+2019-06-26 21:04:01.849  INFO 3192 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-06-26 21:04:01.850  INFO 3192 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-06-26 21:04:01.864  INFO 3192 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2019-06-26 21:06:18.035  INFO 3192 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-06-26 21:06:18.039  INFO 3192 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-06-26 21:06:18.041  INFO 3192 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-26 21:06:37.233  INFO 4736 --- [main] org.rainbow.finance.RainbowApplication   : Starting RainbowApplication on Anish with PID 4736 (C:\Users\Amiti\git\repository\work-holic\rainbow\target\classes started by Amiti in C:\Users\Amiti\git\repository\work-holic\rainbow)
+2019-06-26 21:06:37.252  INFO 4736 --- [main] org.rainbow.finance.RainbowApplication   : No active profile set, falling back to default profiles: default
+2019-06-26 21:06:41.758  INFO 4736 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-06-26 21:06:41.831  INFO 4736 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-26 21:06:41.832  INFO 4736 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-06-26 21:06:41.857  INFO 4736 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_162\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_162/bin/server;C:/Program Files/Java/jre1.8.0_162/bin;C:/Program Files/Java/jre1.8.0_162/lib/amd64;C:\app\Amiti\virtual\product\12.2.0\dbhome_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.8.0_162\bin;C:\WINDOWS\System32\OpenSSH\;C:\Python27;C:\Python27\Scripts;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\SlikSvn\bin;E:\oc;C:\apache-maven-3.5.2\bin;D:\jboss-eap-6.4;C:\Program Files\nodejs\;C:\Ruby25-x64\bin;C:\Users\Amiti\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\SSH Communications Security\SSH Secure Shell;C:\Program Files\Java\jdk1.8.0_162;C:\Program Files\Java\jdk1.8.0_162\bin\jar.exe;C:\Python27;C:\Python27\Scripts;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\SlikSvn\bin;E:\oc\oc.exe;C:\apache-maven-3.5.2\bin;D:\jboss-eap-6.4;C:\apache-ant-1.6.5\bin;C:\Users\Amiti\AppData\Local\GitHubDesktop\bin;C:\Users\Amiti\AppData\Roaming\npm;D:\sts-4.1.1.RELEASE;;.]
+2019-06-26 21:06:42.510  INFO 4736 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-26 21:06:42.511  INFO 4736 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5092 ms
+2019-06-26 21:06:42.877  INFO 4736 --- [main] org.rainbow.finance.configs.AppConfig    : ----------Initializing app custom configuration------------
+2019-06-26 21:06:42.879  INFO 4736 --- [main] org.rainbow.finance.configs.AppConfig    : ---App back-up dir backup already exists----
+2019-06-26 21:06:42.879  INFO 4736 --- [main] org.rainbow.finance.configs.AppConfig    : ----------App Initialization finished---------
+2019-06-26 21:06:44.616  INFO 4736 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-26 21:06:46.114  INFO 4736 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-06-26 21:06:46.405  INFO 4736 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-06-26 21:06:46.838  INFO 4736 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-06-26 21:06:46.889  INFO 4736 --- [main] org.rainbow.finance.RainbowApplication   : Started RainbowApplication in 10.743 seconds (JVM running for 14.352)
+2019-06-26 21:06:48.840  INFO 4736 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-06-26 21:06:48.841  INFO 4736 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-06-26 21:06:48.858  INFO 4736 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 17 ms
+2019-06-26 21:08:46.524  INFO 4736 --- [RMI TCP Connection(3)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-06-26 21:08:46.533  INFO 4736 --- [RMI TCP Connection(3)-127.0.0.1] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-06-26 21:08:46.535  INFO 4736 --- [RMI TCP Connection(3)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-26 21:08:53.867  INFO 6760 --- [main] org.rainbow.finance.RainbowApplication   : Starting RainbowApplication on Anish with PID 6760 (C:\Users\Amiti\git\repository\work-holic\rainbow\target\classes started by Amiti in C:\Users\Amiti\git\repository\work-holic\rainbow)
+2019-06-26 21:08:53.872  INFO 6760 --- [main] org.rainbow.finance.RainbowApplication   : No active profile set, falling back to default profiles: default
+2019-06-26 21:08:55.887  INFO 6760 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-06-26 21:08:55.926  INFO 6760 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-26 21:08:55.927  INFO 6760 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-06-26 21:08:55.938  INFO 6760 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_162\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_162/bin/server;C:/Program Files/Java/jre1.8.0_162/bin;C:/Program Files/Java/jre1.8.0_162/lib/amd64;C:\app\Amiti\virtual\product\12.2.0\dbhome_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.8.0_162\bin;C:\WINDOWS\System32\OpenSSH\;C:\Python27;C:\Python27\Scripts;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\SlikSvn\bin;E:\oc;C:\apache-maven-3.5.2\bin;D:\jboss-eap-6.4;C:\Program Files\nodejs\;C:\Ruby25-x64\bin;C:\Users\Amiti\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\SSH Communications Security\SSH Secure Shell;C:\Program Files\Java\jdk1.8.0_162;C:\Program Files\Java\jdk1.8.0_162\bin\jar.exe;C:\Python27;C:\Python27\Scripts;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\SlikSvn\bin;E:\oc\oc.exe;C:\apache-maven-3.5.2\bin;D:\jboss-eap-6.4;C:\apache-ant-1.6.5\bin;C:\Users\Amiti\AppData\Local\GitHubDesktop\bin;C:\Users\Amiti\AppData\Roaming\npm;D:\sts-4.1.1.RELEASE;;.]
+2019-06-26 21:08:56.215  INFO 6760 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-26 21:08:56.215  INFO 6760 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2269 ms
+2019-06-26 21:08:56.436  INFO 6760 --- [main] org.rainbow.finance.configs.AppConfig    : ----------Initializing app custom configuration------------
+2019-06-26 21:08:56.437  INFO 6760 --- [main] org.rainbow.finance.configs.AppConfig    : ---App back-up dir backup already exists----
+2019-06-26 21:08:56.437  INFO 6760 --- [main] org.rainbow.finance.configs.AppConfig    : ----------App Initialization finished---------
+2019-06-26 21:08:56.739  INFO 6760 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-26 21:08:56.888  INFO 6760 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-06-26 21:08:56.948  INFO 6760 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-06-26 21:08:57.051  INFO 6760 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-06-26 21:08:57.057  INFO 6760 --- [main] org.rainbow.finance.RainbowApplication   : Started RainbowApplication in 4.101 seconds (JVM running for 6.158)
+2019-06-26 21:08:57.334  INFO 6760 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-06-26 21:08:57.335  INFO 6760 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-06-26 21:08:57.347  INFO 6760 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2019-06-26 21:10:14.822  INFO 6760 --- [RMI TCP Connection(3)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-06-26 21:10:14.827  INFO 6760 --- [RMI TCP Connection(3)-127.0.0.1] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-06-26 21:10:14.830  INFO 6760 --- [RMI TCP Connection(3)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-26 21:10:20.920  INFO 19388 --- [main] org.rainbow.finance.RainbowApplication   : Starting RainbowApplication on Anish with PID 19388 (C:\Users\Amiti\git\repository\work-holic\rainbow\target\classes started by Amiti in C:\Users\Amiti\git\repository\work-holic\rainbow)
+2019-06-26 21:10:20.927  INFO 19388 --- [main] org.rainbow.finance.RainbowApplication   : No active profile set, falling back to default profiles: default
+2019-06-26 21:10:22.517  INFO 19388 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-06-26 21:10:22.545  INFO 19388 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-26 21:10:22.546  INFO 19388 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-06-26 21:10:22.554  INFO 19388 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_162\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_162/bin/server;C:/Program Files/Java/jre1.8.0_162/bin;C:/Program Files/Java/jre1.8.0_162/lib/amd64;C:\app\Amiti\virtual\product\12.2.0\dbhome_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.8.0_162\bin;C:\WINDOWS\System32\OpenSSH\;C:\Python27;C:\Python27\Scripts;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\SlikSvn\bin;E:\oc;C:\apache-maven-3.5.2\bin;D:\jboss-eap-6.4;C:\Program Files\nodejs\;C:\Ruby25-x64\bin;C:\Users\Amiti\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\SSH Communications Security\SSH Secure Shell;C:\Program Files\Java\jdk1.8.0_162;C:\Program Files\Java\jdk1.8.0_162\bin\jar.exe;C:\Python27;C:\Python27\Scripts;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\SlikSvn\bin;E:\oc\oc.exe;C:\apache-maven-3.5.2\bin;D:\jboss-eap-6.4;C:\apache-ant-1.6.5\bin;C:\Users\Amiti\AppData\Local\GitHubDesktop\bin;C:\Users\Amiti\AppData\Roaming\npm;D:\sts-4.1.1.RELEASE;;.]
+2019-06-26 21:10:22.782  INFO 19388 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-26 21:10:22.782  INFO 19388 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1776 ms
+2019-06-26 21:10:22.985  INFO 19388 --- [main] org.rainbow.finance.configs.AppConfig    : ----------Initializing app custom configuration------------
+2019-06-26 21:10:22.986  INFO 19388 --- [main] org.rainbow.finance.configs.AppConfig    : ---App back-up dir backup already exists----
+2019-06-26 21:10:22.986  INFO 19388 --- [main] org.rainbow.finance.configs.AppConfig    : ----------App Initialization finished---------
+2019-06-26 21:10:23.194  INFO 19388 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-26 21:10:23.434  INFO 19388 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-06-26 21:10:23.482  INFO 19388 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-06-26 21:10:23.575  INFO 19388 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-06-26 21:10:23.581  INFO 19388 --- [main] org.rainbow.finance.RainbowApplication   : Started RainbowApplication in 3.259 seconds (JVM running for 4.482)
+2019-06-26 21:10:30.773  INFO 19388 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-06-26 21:10:30.773  INFO 19388 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-06-26 21:10:30.800  INFO 19388 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 27 ms
+2019-06-26 21:12:13.772  INFO 19388 --- [RMI TCP Connection(3)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-06-26 21:12:13.775  INFO 19388 --- [RMI TCP Connection(3)-127.0.0.1] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-06-26 21:12:13.777  INFO 19388 --- [RMI TCP Connection(3)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-26 21:12:17.492  INFO 2640 --- [main] org.rainbow.finance.RainbowApplication   : Starting RainbowApplication on Anish with PID 2640 (C:\Users\Amiti\git\repository\work-holic\rainbow\target\classes started by Amiti in C:\Users\Amiti\git\repository\work-holic\rainbow)
+2019-06-26 21:12:17.499  INFO 2640 --- [main] org.rainbow.finance.RainbowApplication   : No active profile set, falling back to default profiles: default
+2019-06-26 21:12:19.468  INFO 2640 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-06-26 21:12:19.500  INFO 2640 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-26 21:12:19.501  INFO 2640 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-06-26 21:12:19.510  INFO 2640 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_162\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_162/bin/server;C:/Program Files/Java/jre1.8.0_162/bin;C:/Program Files/Java/jre1.8.0_162/lib/amd64;C:\app\Amiti\virtual\product\12.2.0\dbhome_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.8.0_162\bin;C:\WINDOWS\System32\OpenSSH\;C:\Python27;C:\Python27\Scripts;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\SlikSvn\bin;E:\oc;C:\apache-maven-3.5.2\bin;D:\jboss-eap-6.4;C:\Program Files\nodejs\;C:\Ruby25-x64\bin;C:\Users\Amiti\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\SSH Communications Security\SSH Secure Shell;C:\Program Files\Java\jdk1.8.0_162;C:\Program Files\Java\jdk1.8.0_162\bin\jar.exe;C:\Python27;C:\Python27\Scripts;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\SlikSvn\bin;E:\oc\oc.exe;C:\apache-maven-3.5.2\bin;D:\jboss-eap-6.4;C:\apache-ant-1.6.5\bin;C:\Users\Amiti\AppData\Local\GitHubDesktop\bin;C:\Users\Amiti\AppData\Roaming\npm;D:\sts-4.1.1.RELEASE;;.]
+2019-06-26 21:12:19.707  INFO 2640 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-26 21:12:19.707  INFO 2640 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2139 ms
+2019-06-26 21:12:20.048  INFO 2640 --- [main] org.rainbow.finance.configs.AppConfig    : ----------Initializing app custom configuration------------
+2019-06-26 21:12:20.048  INFO 2640 --- [main] org.rainbow.finance.configs.AppConfig    : ---App back-up dir backup already exists----
+2019-06-26 21:12:20.048  INFO 2640 --- [main] org.rainbow.finance.configs.AppConfig    : ----------App Initialization finished---------
+2019-06-26 21:12:20.274  INFO 2640 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-26 21:12:20.660  INFO 2640 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-06-26 21:12:20.729  INFO 2640 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-06-26 21:12:20.890  INFO 2640 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-06-26 21:12:20.899  INFO 2640 --- [main] org.rainbow.finance.RainbowApplication   : Started RainbowApplication in 3.963 seconds (JVM running for 5.095)
+2019-06-26 21:12:28.608  INFO 2640 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-06-26 21:12:28.609  INFO 2640 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-06-26 21:12:28.634  INFO 2640 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 24 ms
+2019-06-26 21:13:58.282  INFO 2640 --- [RMI TCP Connection(3)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-06-26 21:13:58.286  INFO 2640 --- [RMI TCP Connection(3)-127.0.0.1] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-06-26 21:13:58.288  INFO 2640 --- [RMI TCP Connection(3)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-26 21:14:04.761  INFO 14360 --- [main] org.rainbow.finance.RainbowApplication   : Starting RainbowApplication on Anish with PID 14360 (C:\Users\Amiti\git\repository\work-holic\rainbow\target\classes started by Amiti in C:\Users\Amiti\git\repository\work-holic\rainbow)
+2019-06-26 21:14:04.767  INFO 14360 --- [main] org.rainbow.finance.RainbowApplication   : No active profile set, falling back to default profiles: default
+2019-06-26 21:14:07.130  INFO 14360 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-06-26 21:14:07.157  INFO 14360 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-26 21:14:07.158  INFO 14360 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-06-26 21:14:07.166  INFO 14360 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_162\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_162/bin/server;C:/Program Files/Java/jre1.8.0_162/bin;C:/Program Files/Java/jre1.8.0_162/lib/amd64;C:\app\Amiti\virtual\product\12.2.0\dbhome_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.8.0_162\bin;C:\WINDOWS\System32\OpenSSH\;C:\Python27;C:\Python27\Scripts;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\SlikSvn\bin;E:\oc;C:\apache-maven-3.5.2\bin;D:\jboss-eap-6.4;C:\Program Files\nodejs\;C:\Ruby25-x64\bin;C:\Users\Amiti\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\SSH Communications Security\SSH Secure Shell;C:\Program Files\Java\jdk1.8.0_162;C:\Program Files\Java\jdk1.8.0_162\bin\jar.exe;C:\Python27;C:\Python27\Scripts;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\SlikSvn\bin;E:\oc\oc.exe;C:\apache-maven-3.5.2\bin;D:\jboss-eap-6.4;C:\apache-ant-1.6.5\bin;C:\Users\Amiti\AppData\Local\GitHubDesktop\bin;C:\Users\Amiti\AppData\Roaming\npm;D:\sts-4.1.1.RELEASE;;.]
+2019-06-26 21:14:07.355  INFO 14360 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-26 21:14:07.356  INFO 14360 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2464 ms
+2019-06-26 21:14:07.512  INFO 14360 --- [main] org.rainbow.finance.configs.AppConfig    : ----------Initializing app custom configuration------------
+2019-06-26 21:14:07.513  INFO 14360 --- [main] org.rainbow.finance.configs.AppConfig    : ---App back-up dir backup already exists----
+2019-06-26 21:14:07.513  INFO 14360 --- [main] org.rainbow.finance.configs.AppConfig    : ----------App Initialization finished---------
+2019-06-26 21:14:07.706  INFO 14360 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-26 21:14:07.871  INFO 14360 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-06-26 21:14:07.919  INFO 14360 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-06-26 21:14:08.013  INFO 14360 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-06-26 21:14:08.019  INFO 14360 --- [main] org.rainbow.finance.RainbowApplication   : Started RainbowApplication in 4.069 seconds (JVM running for 5.989)
+2019-06-26 21:14:10.818  INFO 14360 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-06-26 21:14:10.819  INFO 14360 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-06-26 21:14:10.851  INFO 14360 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 32 ms
+2019-06-26 21:15:00.004  INFO 14360 --- [scheduling-1] mailJob$$EnhancerBySpringCGLIB$$b13dc4f9 : -----------Starting Email job----------
+2019-06-26 21:15:00.005  INFO 14360 --- [scheduling-1] mailJob$$EnhancerBySpringCGLIB$$b13dc4f9 : Email back-up file name: email-error-backup.data
+2019-06-26 21:15:00.006  INFO 14360 --- [scheduling-1] mailJob$$EnhancerBySpringCGLIB$$b13dc4f9 : -----------End Email job----------
+2019-06-26 21:15:05.426  INFO 14360 --- [RMI TCP Connection(3)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-06-26 21:15:05.430  INFO 14360 --- [RMI TCP Connection(3)-127.0.0.1] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-06-26 21:15:05.433  INFO 14360 --- [RMI TCP Connection(3)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-26 21:18:31.414  INFO 12012 --- [main] org.rainbow.finance.RainbowApplication   : Starting RainbowApplication on Anish with PID 12012 (C:\Users\Amiti\git\repository\work-holic\rainbow\target\classes started by Amiti in C:\Users\Amiti\git\repository\work-holic\rainbow)
+2019-06-26 21:18:31.437  INFO 12012 --- [main] org.rainbow.finance.RainbowApplication   : No active profile set, falling back to default profiles: default
+2019-06-26 21:18:32.976  INFO 12012 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-06-26 21:18:33.007  INFO 12012 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-26 21:18:33.008  INFO 12012 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-06-26 21:18:33.016  INFO 12012 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_162\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_162/bin/server;C:/Program Files/Java/jre1.8.0_162/bin;C:/Program Files/Java/jre1.8.0_162/lib/amd64;C:\app\Amiti\virtual\product\12.2.0\dbhome_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.8.0_162\bin;C:\WINDOWS\System32\OpenSSH\;C:\Python27;C:\Python27\Scripts;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\SlikSvn\bin;E:\oc;C:\apache-maven-3.5.2\bin;D:\jboss-eap-6.4;C:\Program Files\nodejs\;C:\Ruby25-x64\bin;C:\Users\Amiti\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\SSH Communications Security\SSH Secure Shell;C:\Program Files\Java\jdk1.8.0_162;C:\Program Files\Java\jdk1.8.0_162\bin\jar.exe;C:\Python27;C:\Python27\Scripts;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\SlikSvn\bin;E:\oc\oc.exe;C:\apache-maven-3.5.2\bin;D:\jboss-eap-6.4;C:\apache-ant-1.6.5\bin;C:\Users\Amiti\AppData\Local\GitHubDesktop\bin;C:\Users\Amiti\AppData\Roaming\npm;D:\sts-4.1.1.RELEASE;;.]
+2019-06-26 21:18:33.259  INFO 12012 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-26 21:18:33.259  INFO 12012 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1770 ms
+2019-06-26 21:18:33.437  INFO 12012 --- [main] org.rainbow.finance.configs.AppConfig    : ----------Initializing app custom configuration------------
+2019-06-26 21:18:33.438  INFO 12012 --- [main] org.rainbow.finance.configs.AppConfig    : ---App back-up dir backup already exists----
+2019-06-26 21:18:33.438  INFO 12012 --- [main] org.rainbow.finance.configs.AppConfig    : ----------App Initialization finished---------
+2019-06-26 21:18:33.688  INFO 12012 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-26 21:18:33.965  INFO 12012 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-06-26 21:18:34.050  INFO 12012 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-06-26 21:18:34.158  INFO 12012 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-06-26 21:18:34.163  INFO 12012 --- [main] org.rainbow.finance.RainbowApplication   : Started RainbowApplication in 3.248 seconds (JVM running for 4.436)
+2019-06-26 21:18:43.218  INFO 12012 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-06-26 21:18:43.220  INFO 12012 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-06-26 21:18:43.227  INFO 12012 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2019-06-26 21:20:11.880  INFO 12012 --- [RMI TCP Connection(3)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-06-26 21:20:11.884  INFO 12012 --- [RMI TCP Connection(3)-127.0.0.1] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-06-26 21:20:11.886  INFO 12012 --- [RMI TCP Connection(3)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-26 21:28:55.534  INFO 20808 --- [main] org.rainbow.finance.RainbowApplication   : Starting RainbowApplication on Anish with PID 20808 (C:\Users\Amiti\git\repository\work-holic\rainbow\target\classes started by Amiti in C:\Users\Amiti\git\repository\work-holic\rainbow)
+2019-06-26 21:28:55.538  INFO 20808 --- [main] org.rainbow.finance.RainbowApplication   : No active profile set, falling back to default profiles: default
+2019-06-26 21:28:57.280  INFO 20808 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-06-26 21:28:57.314  INFO 20808 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-26 21:28:57.315  INFO 20808 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-06-26 21:28:57.326  INFO 20808 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_162\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_162/bin/server;C:/Program Files/Java/jre1.8.0_162/bin;C:/Program Files/Java/jre1.8.0_162/lib/amd64;C:\app\Amiti\virtual\product\12.2.0\dbhome_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.8.0_162\bin;C:\WINDOWS\System32\OpenSSH\;C:\Python27;C:\Python27\Scripts;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\SlikSvn\bin;E:\oc;C:\apache-maven-3.5.2\bin;D:\jboss-eap-6.4;C:\Program Files\nodejs\;C:\Ruby25-x64\bin;C:\Users\Amiti\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\SSH Communications Security\SSH Secure Shell;C:\Program Files\Java\jdk1.8.0_162;C:\Program Files\Java\jdk1.8.0_162\bin\jar.exe;C:\Python27;C:\Python27\Scripts;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\SlikSvn\bin;E:\oc\oc.exe;C:\apache-maven-3.5.2\bin;D:\jboss-eap-6.4;C:\apache-ant-1.6.5\bin;C:\Users\Amiti\AppData\Local\GitHubDesktop\bin;C:\Users\Amiti\AppData\Roaming\npm;D:\sts-4.1.1.RELEASE;;.]
+2019-06-26 21:28:57.519  INFO 20808 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-26 21:28:57.520  INFO 20808 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1898 ms
+2019-06-26 21:28:57.680  INFO 20808 --- [main] org.rainbow.finance.configs.AppConfig    : ----------Initializing app custom configuration------------
+2019-06-26 21:28:57.680  INFO 20808 --- [main] org.rainbow.finance.configs.AppConfig    : ---App back-up dir backup already exists----
+2019-06-26 21:28:57.681  INFO 20808 --- [main] org.rainbow.finance.configs.AppConfig    : ----------App Initialization finished---------
+2019-06-26 21:28:58.095  INFO 20808 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-26 21:28:58.380  INFO 20808 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-06-26 21:28:58.443  INFO 20808 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-06-26 21:28:58.536  INFO 20808 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-06-26 21:28:58.541  INFO 20808 --- [main] org.rainbow.finance.RainbowApplication   : Started RainbowApplication in 3.587 seconds (JVM running for 4.531)
+2019-06-26 21:29:05.043  INFO 20808 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-06-26 21:29:05.044  INFO 20808 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-06-26 21:29:05.052  INFO 20808 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2019-06-26 21:29:56.316  INFO 20808 --- [RMI TCP Connection(4)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-06-26 21:29:56.320  INFO 20808 --- [RMI TCP Connection(4)-127.0.0.1] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-06-26 21:29:56.323  INFO 20808 --- [RMI TCP Connection(4)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-26 21:44:07.591  INFO 17264 --- [main] org.rainbow.finance.RainbowApplication   : Starting RainbowApplication on Anish with PID 17264 (C:\Users\Amiti\git\repository\work-holic\rainbow\target\classes started by Amiti in C:\Users\Amiti\git\repository\work-holic\rainbow)
+2019-06-26 21:44:07.595  INFO 17264 --- [main] org.rainbow.finance.RainbowApplication   : No active profile set, falling back to default profiles: default
+2019-06-26 21:44:09.460  INFO 17264 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-06-26 21:44:09.488  INFO 17264 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-26 21:44:09.488  INFO 17264 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-06-26 21:44:09.496  INFO 17264 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_162\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_162/bin/server;C:/Program Files/Java/jre1.8.0_162/bin;C:/Program Files/Java/jre1.8.0_162/lib/amd64;C:\app\Amiti\virtual\product\12.2.0\dbhome_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.8.0_162\bin;C:\WINDOWS\System32\OpenSSH\;C:\Python27;C:\Python27\Scripts;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\SlikSvn\bin;E:\oc;C:\apache-maven-3.5.2\bin;D:\jboss-eap-6.4;C:\Program Files\nodejs\;C:\Ruby25-x64\bin;C:\Users\Amiti\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\SSH Communications Security\SSH Secure Shell;C:\Program Files\Java\jdk1.8.0_162;C:\Program Files\Java\jdk1.8.0_162\bin\jar.exe;C:\Python27;C:\Python27\Scripts;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\SlikSvn\bin;E:\oc\oc.exe;C:\apache-maven-3.5.2\bin;D:\jboss-eap-6.4;C:\apache-ant-1.6.5\bin;C:\Users\Amiti\AppData\Local\GitHubDesktop\bin;C:\Users\Amiti\AppData\Roaming\npm;D:\sts-4.1.1.RELEASE;;.]
+2019-06-26 21:44:10.308  INFO 17264 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-26 21:44:10.308  INFO 17264 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2665 ms
+2019-06-26 21:44:10.447  INFO 17264 --- [main] org.rainbow.finance.configs.AppConfig    : ----------Initializing app custom configuration------------
+2019-06-26 21:44:10.447  INFO 17264 --- [main] org.rainbow.finance.configs.AppConfig    : ---App back-up dir backup already exists----
+2019-06-26 21:44:10.447  INFO 17264 --- [main] org.rainbow.finance.configs.AppConfig    : ----------App Initialization finished---------
+2019-06-26 21:44:10.653  INFO 17264 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-26 21:44:10.921  INFO 17264 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-06-26 21:44:10.977  INFO 17264 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-06-26 21:44:11.057  INFO 17264 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-06-26 21:44:11.064  INFO 17264 --- [main] org.rainbow.finance.RainbowApplication   : Started RainbowApplication in 4.253 seconds (JVM running for 10.867)
+2019-06-26 21:44:37.881  INFO 17264 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-06-26 21:44:37.882  INFO 17264 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-06-26 21:44:37.893  INFO 17264 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2019-06-26 21:46:39.966  INFO 17264 --- [RMI TCP Connection(3)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-06-26 21:46:39.969  INFO 17264 --- [RMI TCP Connection(3)-127.0.0.1] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-06-26 21:46:39.971  INFO 17264 --- [RMI TCP Connection(3)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-26 21:49:09.312  INFO 17644 --- [main] org.rainbow.finance.RainbowApplication   : Starting RainbowApplication on Anish with PID 17644 (C:\Users\Amiti\git\repository\work-holic\rainbow\target\classes started by Amiti in C:\Users\Amiti\git\repository\work-holic\rainbow)
+2019-06-26 21:49:09.323  INFO 17644 --- [main] org.rainbow.finance.RainbowApplication   : No active profile set, falling back to default profiles: default
+2019-06-26 21:49:10.948  INFO 17644 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-06-26 21:49:10.979  INFO 17644 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-26 21:49:10.979  INFO 17644 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-06-26 21:49:10.990  INFO 17644 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_162\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_162/bin/server;C:/Program Files/Java/jre1.8.0_162/bin;C:/Program Files/Java/jre1.8.0_162/lib/amd64;C:\app\Amiti\virtual\product\12.2.0\dbhome_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.8.0_162\bin;C:\WINDOWS\System32\OpenSSH\;C:\Python27;C:\Python27\Scripts;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\SlikSvn\bin;E:\oc;C:\apache-maven-3.5.2\bin;D:\jboss-eap-6.4;C:\Program Files\nodejs\;C:\Ruby25-x64\bin;C:\Users\Amiti\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\SSH Communications Security\SSH Secure Shell;C:\Program Files\Java\jdk1.8.0_162;C:\Program Files\Java\jdk1.8.0_162\bin\jar.exe;C:\Python27;C:\Python27\Scripts;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\SlikSvn\bin;E:\oc\oc.exe;C:\apache-maven-3.5.2\bin;D:\jboss-eap-6.4;C:\apache-ant-1.6.5\bin;C:\Users\Amiti\AppData\Local\GitHubDesktop\bin;C:\Users\Amiti\AppData\Roaming\npm;D:\sts-4.1.1.RELEASE;;.]
+2019-06-26 21:49:11.192  INFO 17644 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-26 21:49:11.192  INFO 17644 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1776 ms
+2019-06-26 21:49:11.350  INFO 17644 --- [main] org.rainbow.finance.configs.AppConfig    : ----------Initializing app custom configuration------------
+2019-06-26 21:49:11.351  INFO 17644 --- [main] org.rainbow.finance.configs.AppConfig    : ---App back-up dir backup already exists----
+2019-06-26 21:49:11.351  INFO 17644 --- [main] org.rainbow.finance.configs.AppConfig    : ----------App Initialization finished---------
+2019-06-26 21:49:11.582  INFO 17644 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-26 21:49:11.798  INFO 17644 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-06-26 21:49:11.850  INFO 17644 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-06-26 21:49:11.953  INFO 17644 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-06-26 21:49:11.958  INFO 17644 --- [main] org.rainbow.finance.RainbowApplication   : Started RainbowApplication in 3.411 seconds (JVM running for 4.608)
+2019-06-26 21:49:38.313  INFO 17644 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-06-26 21:49:38.313  INFO 17644 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-06-26 21:49:38.325  INFO 17644 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2019-06-26 21:52:36.923  INFO 17644 --- [RMI TCP Connection(3)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-06-26 21:52:36.927  INFO 17644 --- [RMI TCP Connection(3)-127.0.0.1] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-06-26 21:52:36.929  INFO 17644 --- [RMI TCP Connection(3)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-26 21:52:42.532  INFO 10912 --- [main] org.rainbow.finance.RainbowApplication   : Starting RainbowApplication on Anish with PID 10912 (C:\Users\Amiti\git\repository\work-holic\rainbow\target\classes started by Amiti in C:\Users\Amiti\git\repository\work-holic\rainbow)
+2019-06-26 21:52:42.549  INFO 10912 --- [main] org.rainbow.finance.RainbowApplication   : No active profile set, falling back to default profiles: default
+2019-06-26 21:52:44.052  INFO 10912 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-06-26 21:52:44.080  INFO 10912 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-26 21:52:44.080  INFO 10912 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-06-26 21:52:44.088  INFO 10912 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_162\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_162/bin/server;C:/Program Files/Java/jre1.8.0_162/bin;C:/Program Files/Java/jre1.8.0_162/lib/amd64;C:\app\Amiti\virtual\product\12.2.0\dbhome_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.8.0_162\bin;C:\WINDOWS\System32\OpenSSH\;C:\Python27;C:\Python27\Scripts;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\SlikSvn\bin;E:\oc;C:\apache-maven-3.5.2\bin;D:\jboss-eap-6.4;C:\Program Files\nodejs\;C:\Ruby25-x64\bin;C:\Users\Amiti\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\SSH Communications Security\SSH Secure Shell;C:\Program Files\Java\jdk1.8.0_162;C:\Program Files\Java\jdk1.8.0_162\bin\jar.exe;C:\Python27;C:\Python27\Scripts;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\SlikSvn\bin;E:\oc\oc.exe;C:\apache-maven-3.5.2\bin;D:\jboss-eap-6.4;C:\apache-ant-1.6.5\bin;C:\Users\Amiti\AppData\Local\GitHubDesktop\bin;C:\Users\Amiti\AppData\Roaming\npm;D:\sts-4.1.1.RELEASE;;.]
+2019-06-26 21:52:44.296  INFO 10912 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-26 21:52:44.296  INFO 10912 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1673 ms
+2019-06-26 21:52:44.459  INFO 10912 --- [main] org.rainbow.finance.configs.AppConfig    : ----------Initializing app custom configuration------------
+2019-06-26 21:52:44.460  INFO 10912 --- [main] org.rainbow.finance.configs.AppConfig    : ---App back-up dir backup already exists----
+2019-06-26 21:52:44.460  INFO 10912 --- [main] org.rainbow.finance.configs.AppConfig    : ----------App Initialization finished---------
+2019-06-26 21:52:44.764  INFO 10912 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-26 21:52:44.988  INFO 10912 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-06-26 21:52:45.041  INFO 10912 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-06-26 21:52:45.188  INFO 10912 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-06-26 21:52:45.195  INFO 10912 --- [main] org.rainbow.finance.RainbowApplication   : Started RainbowApplication in 3.265 seconds (JVM running for 4.334)
+2019-06-26 21:53:37.546  INFO 10912 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-06-26 21:53:37.557  INFO 10912 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-06-26 21:53:37.568  INFO 10912 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2019-06-26 21:56:11.913  INFO 10912 --- [RMI TCP Connection(4)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-06-26 21:56:11.917  INFO 10912 --- [RMI TCP Connection(4)-127.0.0.1] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-06-26 21:56:11.919  INFO 10912 --- [RMI TCP Connection(4)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-26 21:57:05.040  INFO 4468 --- [main] org.rainbow.finance.RainbowApplication   : Starting RainbowApplication on Anish with PID 4468 (C:\Users\Amiti\git\repository\work-holic\rainbow\target\classes started by Amiti in C:\Users\Amiti\git\repository\work-holic\rainbow)
+2019-06-26 21:57:05.071  INFO 4468 --- [main] org.rainbow.finance.RainbowApplication   : No active profile set, falling back to default profiles: default
+2019-06-26 21:57:07.320  INFO 4468 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-06-26 21:57:07.356  INFO 4468 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-26 21:57:07.357  INFO 4468 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-06-26 21:57:07.366  INFO 4468 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_162\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_162/bin/server;C:/Program Files/Java/jre1.8.0_162/bin;C:/Program Files/Java/jre1.8.0_162/lib/amd64;C:\app\Amiti\virtual\product\12.2.0\dbhome_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.8.0_162\bin;C:\WINDOWS\System32\OpenSSH\;C:\Python27;C:\Python27\Scripts;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\SlikSvn\bin;E:\oc;C:\apache-maven-3.5.2\bin;D:\jboss-eap-6.4;C:\Program Files\nodejs\;C:\Ruby25-x64\bin;C:\Users\Amiti\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\SSH Communications Security\SSH Secure Shell;C:\Program Files\Java\jdk1.8.0_162;C:\Program Files\Java\jdk1.8.0_162\bin\jar.exe;C:\Python27;C:\Python27\Scripts;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\SlikSvn\bin;E:\oc\oc.exe;C:\apache-maven-3.5.2\bin;D:\jboss-eap-6.4;C:\apache-ant-1.6.5\bin;C:\Users\Amiti\AppData\Local\GitHubDesktop\bin;C:\Users\Amiti\AppData\Roaming\npm;D:\sts-4.1.1.RELEASE;;.]
+2019-06-26 21:57:07.648  INFO 4468 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-26 21:57:07.648  INFO 4468 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2498 ms
+2019-06-26 21:57:07.807  INFO 4468 --- [main] org.rainbow.finance.configs.AppConfig    : ----------Initializing app custom configuration------------
+2019-06-26 21:57:07.807  INFO 4468 --- [main] org.rainbow.finance.configs.AppConfig    : ---App back-up dir backup already exists----
+2019-06-26 21:57:07.807  INFO 4468 --- [main] org.rainbow.finance.configs.AppConfig    : ----------App Initialization finished---------
+2019-06-26 21:57:08.027  INFO 4468 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-26 21:57:08.225  INFO 4468 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-06-26 21:57:08.270  INFO 4468 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-06-26 21:57:08.360  INFO 4468 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-06-26 21:57:08.365  INFO 4468 --- [main] org.rainbow.finance.RainbowApplication   : Started RainbowApplication in 3.867 seconds (JVM running for 5.056)
+2019-06-26 21:57:13.671  INFO 4468 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-06-26 21:57:13.672  INFO 4468 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-06-26 21:57:13.680  INFO 4468 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2019-06-26 22:01:31.641  INFO 16668 --- [main] org.rainbow.finance.RainbowApplication   : Starting RainbowApplication on Anish with PID 16668 (C:\Users\Amiti\git\repository\work-holic\rainbow\target\classes started by Amiti in C:\Users\Amiti\git\repository\work-holic\rainbow)
+2019-06-26 22:01:31.668  INFO 16668 --- [main] org.rainbow.finance.RainbowApplication   : No active profile set, falling back to default profiles: default
+2019-06-26 22:01:33.268  INFO 16668 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-06-26 22:01:33.294  INFO 16668 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-26 22:01:33.295  INFO 16668 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-06-26 22:01:33.302  INFO 16668 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_162\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_162/bin/server;C:/Program Files/Java/jre1.8.0_162/bin;C:/Program Files/Java/jre1.8.0_162/lib/amd64;C:\app\Amiti\virtual\product\12.2.0\dbhome_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.8.0_162\bin;C:\WINDOWS\System32\OpenSSH\;C:\Python27;C:\Python27\Scripts;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\SlikSvn\bin;E:\oc;C:\apache-maven-3.5.2\bin;D:\jboss-eap-6.4;C:\Program Files\nodejs\;C:\Ruby25-x64\bin;C:\Users\Amiti\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\SSH Communications Security\SSH Secure Shell;C:\Program Files\Java\jdk1.8.0_162;C:\Program Files\Java\jdk1.8.0_162\bin\jar.exe;C:\Python27;C:\Python27\Scripts;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\SlikSvn\bin;E:\oc\oc.exe;C:\apache-maven-3.5.2\bin;D:\jboss-eap-6.4;C:\apache-ant-1.6.5\bin;C:\Users\Amiti\AppData\Local\GitHubDesktop\bin;C:\Users\Amiti\AppData\Roaming\npm;D:\sts-4.1.1.RELEASE;;.]
+2019-06-26 22:01:33.552  INFO 16668 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-26 22:01:33.554  INFO 16668 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1811 ms
+2019-06-26 22:01:33.739  INFO 16668 --- [main] org.rainbow.finance.configs.AppConfig    : ----------Initializing app custom configuration------------
+2019-06-26 22:01:33.740  INFO 16668 --- [main] org.rainbow.finance.configs.AppConfig    : ---App back-up dir backup already exists----
+2019-06-26 22:01:33.740  INFO 16668 --- [main] org.rainbow.finance.configs.AppConfig    : ----------App Initialization finished---------
+2019-06-26 22:01:34.057  INFO 16668 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-26 22:01:34.256  INFO 16668 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-06-26 22:01:34.307  INFO 16668 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-06-26 22:01:34.388 ERROR 16668 --- [main] org.apache.catalina.util.LifecycleBase   : Failed to start component [Connector[HTTP/1.1-8080]]
+
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1008) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:226) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:259) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:197) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:311) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:164) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552) [spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.rainbow.finance.RainbowApplication.main(RainbowApplication.java:12) [classes/:na]
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_162]
+	at sun.nio.ch.Net.bind(Unknown Source) ~[na:1.8.0_162]
+	at sun.nio.ch.Net.bind(Unknown Source) ~[na:1.8.0_162]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source) ~[na:1.8.0_162]
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source) ~[na:1.8.0_162]
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:236) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1085) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1171) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:568) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1005) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	... 14 common frames omitted
+
+2019-06-26 22:01:34.395  INFO 16668 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-06-26 22:01:34.411  INFO 16668 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-06-26 22:01:34.419 ERROR 16668 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2019-06-26 22:01:34.423  INFO 16668 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-06-26 22:01:34.428  INFO 16668 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-26 22:01:39.246  INFO 4468 --- [RMI TCP Connection(3)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-06-26 22:01:39.250  INFO 4468 --- [RMI TCP Connection(3)-127.0.0.1] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-06-26 22:01:39.251  INFO 4468 --- [RMI TCP Connection(3)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-26 22:01:44.228  INFO 17068 --- [main] org.rainbow.finance.RainbowApplication   : Starting RainbowApplication on Anish with PID 17068 (C:\Users\Amiti\git\repository\work-holic\rainbow\target\classes started by Amiti in C:\Users\Amiti\git\repository\work-holic\rainbow)
+2019-06-26 22:01:44.232  INFO 17068 --- [main] org.rainbow.finance.RainbowApplication   : No active profile set, falling back to default profiles: default
+2019-06-26 22:01:45.657  INFO 17068 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-06-26 22:01:45.687  INFO 17068 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-26 22:01:45.688  INFO 17068 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-06-26 22:01:45.698  INFO 17068 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_162\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_162/bin/server;C:/Program Files/Java/jre1.8.0_162/bin;C:/Program Files/Java/jre1.8.0_162/lib/amd64;C:\app\Amiti\virtual\product\12.2.0\dbhome_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.8.0_162\bin;C:\WINDOWS\System32\OpenSSH\;C:\Python27;C:\Python27\Scripts;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\SlikSvn\bin;E:\oc;C:\apache-maven-3.5.2\bin;D:\jboss-eap-6.4;C:\Program Files\nodejs\;C:\Ruby25-x64\bin;C:\Users\Amiti\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\SSH Communications Security\SSH Secure Shell;C:\Program Files\Java\jdk1.8.0_162;C:\Program Files\Java\jdk1.8.0_162\bin\jar.exe;C:\Python27;C:\Python27\Scripts;C:\Program Files (x86)\GnuWin32\bin;C:\Program Files\SlikSvn\bin;E:\oc\oc.exe;C:\apache-maven-3.5.2\bin;D:\jboss-eap-6.4;C:\apache-ant-1.6.5\bin;C:\Users\Amiti\AppData\Local\GitHubDesktop\bin;C:\Users\Amiti\AppData\Roaming\npm;D:\sts-4.1.1.RELEASE;;.]
+2019-06-26 22:01:45.915  INFO 17068 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-26 22:01:45.915  INFO 17068 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1635 ms
+2019-06-26 22:01:46.075  INFO 17068 --- [main] org.rainbow.finance.configs.AppConfig    : ----------Initializing app custom configuration------------
+2019-06-26 22:01:46.075  INFO 17068 --- [main] org.rainbow.finance.configs.AppConfig    : ---App back-up dir backup already exists----
+2019-06-26 22:01:46.076  INFO 17068 --- [main] org.rainbow.finance.configs.AppConfig    : ----------App Initialization finished---------
+2019-06-26 22:01:46.291  INFO 17068 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-26 22:01:46.489  INFO 17068 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-06-26 22:01:46.560  INFO 17068 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-06-26 22:01:46.644  INFO 17068 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-06-26 22:01:46.650  INFO 17068 --- [main] org.rainbow.finance.RainbowApplication   : Started RainbowApplication in 2.927 seconds (JVM running for 4.183)
+2019-06-26 22:02:05.901  INFO 17068 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-06-26 22:02:05.902  INFO 17068 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-06-26 22:02:05.912  INFO 17068 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2019-06-26 22:03:11.950  INFO 17068 --- [RMI TCP Connection(3)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-06-26 22:03:11.957  INFO 17068 --- [RMI TCP Connection(3)-127.0.0.1] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-06-26 22:03:11.959  INFO 17068 --- [RMI TCP Connection(3)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
