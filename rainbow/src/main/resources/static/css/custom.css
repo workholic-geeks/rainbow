@@ -28,6 +28,7 @@ width: 100%;
 /*    #D7D0D0 */
 background: white;
   }  
+  
   .side-call-logo
   {
 	  margin-left: 90%;
@@ -48,8 +49,12 @@ background: white;
    }
   .modal-content {
     width: 52%;
-}
-	
+  }
+	.loan-content {
+		font-size: 15px;
+		font-weight: bold;
+		margin-bottom: 2%;
+	}
 }
 
 @media only screen and (max-width: 991px) {
