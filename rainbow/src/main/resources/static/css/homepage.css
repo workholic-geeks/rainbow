@@ -46,3 +46,19 @@
 	width:60%;
     border-radius: 50%;
 }
+.text-muted{
+margin:10px;
+font-family: 'Roboto Slab', serif;
+}
+.btncallmeback{
+    margin-top: 40px;
+}
+.btnhiwork{
+margin-top:40px;
+}
+h1, h2, h3, h4, h5, h6{
+font-family: 'Roboto Slab', serif;
+}
+button, html input[type=button], input[type=reset], input[type=submit]{
+font-family: 'Roboto Slab', serif;
+}
