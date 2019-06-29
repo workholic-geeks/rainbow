@@ -196,7 +196,7 @@ input: -webkit-autofill, input: -webkit-autofill:hover, input: -webkit-autofill:
 #header .top_header .address p {
 	font-size: 12px;
 	padding-top: 2px;
-	color: #646464;
+	color: green;
 	font-family: 'Open Sans', sans-serif;
 }
 
@@ -1303,18 +1303,20 @@ ul.entry-meta {
 
 #shortTermLoanDesc {
 	width: 72%;
+	color: green;
 	text-align: center;
 	font-size: 15px;
-	font-weight: bold;
+	font-weight: inherit;
 	margin-left: 15%;
 	margin-top: 2%;
 }
 
 #mediumTermLoanDesc {
 	width: 72%;
+	color: green;
 	text-align: center;
 	font-size: 15px;
-	font-weight: bold;
+	font-weight: inherit;
 	margin-left: 15%;
 	margin-top: 2%;
 }
@@ -1323,9 +1325,10 @@ ul.entry-meta {
 	width: 72%;
 	text-align: center;
 	font-size: 15px;
-	font-weight: bold;
+	font-weight: inherit;
 	margin-left: 15%;
 	margin-top: 2%;
+	color: green;
 }
 
 #slideshow {
@@ -1360,16 +1363,48 @@ ul.entry-meta {
 
 #shortTermLoanHeading {
 	margin-left: 10%;
+	color: green;
 }
 
 #mediumTermLoanHeading {
 	margin-left: 10%;
+	color: green;
 }
 
 #longTermLoanHeading {
 	margin-left: 10%;
+	color: green;
 }
 
 .result.col-md-12.col-sm-12 {
 	padding: 4%;
+}
+
+#greenCheckMark {
+	max-width: 10%;
+	float: left;
+}
+
+#loanProductDetails {
+	padding: 3%;
+}
+
+table {
+	width: 100%;
+}
+
+li>a {
+	color: green !important;
+}
+
+.emi-header {
+	color: green;
+}
+
+.container {
+	color: green;
+}
+
+.text-muted {
+	color: green;
 }
