@@ -1,75 +1,93 @@
 <head>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$("button").click(function() {
+			$.ajax({
+				url : "sendEmail.json",
+				success : function(result) {
+					$("#div1").html(result);
+				}
+			});
+			alert("**Thank you for contacting Us**");
+		});
+	});
+</script>
 </head>
 <body>
-<div class="container">
-	<br> <p class="loan-content">Rainbow
-			Capital Ltd is a unique micro lending company with total flexibility
-			in its DNA. The company offers Flexible Education Loans, Flexible
-			Medical Loans, Flexible Consumption Loans and many more Flexible
-			Loans as per need. The Flexibility in Amount and Tenor allows the
-			prospective borrower to plan his finances and build a sound credit
-			history.</p> </br>
-	<div class="row">
-		<div class="col-sm-7" style="background-color: white;">
-			<img src="contactusImage.jpg" style="width: 100%; height: 100%; box-shadow: 0 0 20px rgba(0,0,0,0.4);">
-		</div>
-		<div class="col-sm-5" style="background-color: white;">
-			<div class="container applyForm loan-form-border"
-				id="myForm" style="border-width: 1px;width: 100%;box-shadow: 0 0 20px rgba(0,0,0,0.4);">
-				<br> <i><h4 class="heading" style="color: #3A4792">Please
-						fill in your details to get a call from our Loan Expert!</h4></i> <br>
-				<br>
-				<form name="applyform" method="POST" action="welcome.html">
-
-					<div class="form-group">
-						<div class="select-wrapper">
-							<select data-drupal-selector="edit-city"
-								class="form-select required form-control  " id="edit-city"
-								name="city" required="required" aria-required="true"><option
-									value="" selected="selected">Select your city</option>
-								<option value="Lusaka">Lusaka</option>
-							</select>
-						</div>
-					</div>
-					<div class="form-group  ">
-						<input name="name" id="li_display_name"
-							class="form-input-height form-control font12 radius-5 text-darkgrey font-weight400 text-capitalize  GAnalytica_Text  "
-							maxlength="50" placeholder="Enter your full name" value=""
-							type="text" required>
-					</div>
-					<div class="form-group  ">
-						<input name="mobileNo" id="li_display_mobileNo"
-							class="form-input-height form-control font12 radius-5 text-darkgrey font-weight400 text-capitalize  GAnalytica_Text"
-							maxlength="50" placeholder="Enter your mobile number" value=""
-							type="text" required>
-					</div>
-
-					<div class="form-group  ">
-						<input name="emailId" id="li_display_email"
-							class="form-input-height form-control font12 radius-5 text-darkgrey font-weight400 text-capitalize  GAnalytica_Text"
-							maxlength="50" placeholder="Enter your email ID" value=""
-							type="text" required>
-					</div>
-
-					<div
-						class="form-item js-form-item form-type-textarea js-form-type-textarea form-item-interactiondetails js-form-item-interactiondetails form-group">
-						<div class="form-textarea-wrapper">
-							<textarea data-drupal-selector="edit-interactiondetails"
-								class="form-textarea form-control resize-vertical"
-								id="query-query" name="query" rows="1" cols="60"
-								placeholder="Write a Query"></textarea>
-						</div>
-
-					</div>
-					<br>
-					<button type="submit" onclick="formValidate()"
-						class="btn btn-primary full-width">Submit</button>
-					</br> </br>
-				</form>
+	<div class="container">
+		<br>
+		<p class="loan-content">Rainbow Capital Ltd is a unique micro
+			lending company with total flexibility in its DNA. The company offers
+			Flexible Education Loans, Flexible Medical Loans, Flexible
+			Consumption Loans and many more Flexible Loans as per need. The
+			Flexibility in Amount and Tenor allows the prospective borrower to
+			plan his finances and build a sound credit history.</p>
+		</br>
+		<div class="row">
+			<div class="col-sm-7" style="background-color: white;">
+				<img src="contactusImage.jpg"
+					style="width: 100%; height: 100%; box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);">
 			</div>
+			<div class="col-sm-5" style="background-color: white;">
+				<div class="container applyForm loan-form-border" id="myForm"
+					style="border-width: 1px; width: 100%; box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);">
+					<br> <i><h4 class="heading" style="color: #3A4792">Please
+							fill in your details to get a call from our Loan Expert!</h4></i> <br>
+					<br>
+					<form name="applyform" id="formId" action="">
 
+						<div class="form-group">
+							<div class="select-wrapper">
+								<select data-drupal-selector="edit-city"
+									class="form-select required form-control  " id="edit-city"
+									name="city" required="required" aria-required="true"><option
+										value="" selected="selected">Select your city</option>
+									<option value="Lusaka">Lusaka</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group  ">
+							<input name="name" id="li_display_name"
+								class="form-input-height form-control font12 radius-5 text-darkgrey font-weight400 text-capitalize  GAnalytica_Text  "
+								maxlength="50" placeholder="Enter your full name" value=""
+								type="text" required>
+						</div>
+						<div class="form-group  ">
+							<input name="mobileNo" id="li_display_mobileNo"
+								class="form-input-height form-control font12 radius-5 text-darkgrey font-weight400 text-capitalize  GAnalytica_Text"
+								maxlength="50" placeholder="Enter your mobile number" value=""
+								type="text" required>
+						</div>
+
+						<div class="form-group  ">
+							<input name="emailId" id="li_display_email"
+								class="form-input-height form-control font12 radius-5 text-darkgrey font-weight400 text-capitalize  GAnalytica_Text"
+								maxlength="50" placeholder="Enter your email ID" value=""
+								type="text" required>
+						</div>
+
+						<div
+							class="form-item js-form-item form-type-textarea js-form-type-textarea form-item-interactiondetails js-form-item-interactiondetails form-group">
+							<div class="form-textarea-wrapper">
+								<textarea data-drupal-selector="edit-interactiondetails"
+									class="form-textarea form-control resize-vertical"
+									id="query-query" name="query" rows="1" cols="60"
+									placeholder="Write a Query"></textarea>
+							</div>
+
+						</div>
+						<br>
+						<div id="div1"></div>
+						<button type="submit" class="btn btn-primary full-width">Submit</button>
+						</br> </br>
+					</form>
+				</div>
+
+			</div>
 		</div>
 	</div>
-</div>
 </body>
