@@ -67,6 +67,15 @@ function loadFaq() {
 	removeAll();
 	active("#faqLink");
 }
+function loadAboutUs() {
+	$("#homepage").empty();
+	var url = "http://" + hostName + ":8080" + "/aboutUs.html";
+	$("#welcome").empty();
+	$("#welcome").load(url);
+	removeAll();
+	active("#aboutUsLink");
+}
+
 function loadShortTermLoan(){
 	$("#calllogoinallpages").load("http://" + hostName + ":8080" + "/emiCalculator.html",function(){
 		$("#rateOfInterest").hide();

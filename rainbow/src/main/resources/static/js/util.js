@@ -15,6 +15,7 @@ function removeAll() {
 	jQuery("#shortTermLoan").removeClass("active");
 	jQuery("#mediumTermLoan").removeClass("active");
 	jQuery("#longTermLoan").removeClass("active");
+	jQuery("#aboutUsLink").removeClass("active");
 }
 
 /**
