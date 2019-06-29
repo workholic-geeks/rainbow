@@ -34,7 +34,7 @@
 width:100%;
 }
 .result{
-	   padding: 46px;
+	   padding:21px;
     margin-bottom: 20px;
     border-bottom: 1px solid #bfc2c5;
     font-size: 18px;
@@ -89,13 +89,17 @@ span.max {
 .interestRate{
 pointer-events: none;
   opacity: 0.7;
+  display:none;
+}
+.emi-header{
+text-align: center;
 }
 </style>
 <body>
 <div class="container">
 <div class="col-xs-12 col-sm-12 ">
-<h2 id="emi-header">Rainbow Capitals EMI Calculator</h2></div>
-<div class="col-xs-12 col-sm-12 col-md-6">
+<h3 class="emi-header" id="emi-header">Rainbow Capitals EMI Calculator</h3></div>
+<div class="col-xs-12 col-sm-12 col-md-12">
 		<form class=" alert alert-info col-xs-12 col-sm-12 no-pad">
 			<div class="form-group">
 			<label>Loan Amount</label>
@@ -103,7 +107,7 @@ pointer-events: none;
 				<div class="input-group">
 					<span class="input-group-addon"> <span
 						class="glyphicon glyphicon-rupee">K</span>
-					</span> <input type="text" id="displayLoanAmount" class="form-control "
+					</span> <input type="number" id="displayLoanAmount" class="form-control "
 						value="80000" tabindex="1" placeholder="Loan Amount">
 				</div>
 			</div>
@@ -120,7 +124,7 @@ pointer-events: none;
 				<div class="input-group">
 					<span class="input-group-addon"> <span
 						class="glyphicon glyphicon-time"></span>
-					</span> <input type="text" id="displayRepaymentmonth"
+					</span> <input type="number" id="displayRepaymentmonth"
 						value="20" class="form-control" tabindex="3" placeholder="Loan Tenure">
 				</div>
 			</div>
@@ -131,7 +135,7 @@ pointer-events: none;
 			</div>
 			<div class="clearfix"></div>
 		</div>
-		<div class="form-group" id="rateOfInterest">
+		<div class="form-group interestRate" id="rateOfInterest" >
 			<label class="control-label">Rate of interest</label>
 			<div class="form-group">
 				<div class="input-group">
@@ -153,22 +157,14 @@ pointer-events: none;
 				<button type=button onclick='calculteEMI()' class="btn width100 btn-success btn-lg">Submit</button>
 			</div>
 		</div>
-	</form>
-</div>
-
-<div class="col-xs-12 col-sm-12 col-md-6 alert alert-info " id="applySection">
-
-	<div class="result col-md-12 col-sm-12">
+		<div class="result col-md-12 col-sm-12">
 		<strong>Equated Monthly Instalment</strong><br> <input
 			class="btn btn-success btn-lg" id="pay1" value="5628.89"
-			type="button"><br>
-			
+			type="button"><br>	
 	</div>
-	<div class="result col-md-12 col-sm-12">
-	 <input	class="btn btn-info btn-lg"   value="Apply for a loan" type="button">
-			
-	</div>
-	</div>
+		
+	</form>
+</div>
 </div>
 </body>
 </html>
