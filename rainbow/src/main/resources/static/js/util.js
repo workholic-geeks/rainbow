@@ -39,7 +39,7 @@ function submitRequest(){
            dataType: "json",
            contentType: 'application/json',
            success: function (msg) {
-        	   $("#div1").html(result);
+        	   $("#div1").html(msg.response.result);
            },
 
            data: JSON.stringify(contactUs)
