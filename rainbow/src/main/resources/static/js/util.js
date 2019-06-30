@@ -18,3 +18,30 @@ function removeAll() {
 	jQuery("#aboutUsLink").removeClass("active");
 }
 
+function contactUs(){
+	submitRequest();
+}
+function submitRequest(){
+	var name=$("#li_display_name").val();
+	var city=$("#edit-city").val();
+	var phoneNumber=$("#li_display_mobileNo").val();
+	var emailId=$("#li_display_email").val();
+	var query=$("#query-query").val();
+	var contactUs={
+	phoneNumber:phoneNumber,
+	comments:query,
+	name:name,
+	city:city,
+	personEmail:emailId};
+	 $.ajax({
+           type: "post",
+           url: "/rainbow/sendMail.json",
+           dataType: "json",
+           contentType: 'application/json',
+           success: function (msg) {
+        	   $("#div1").html(result);
+           },
+
+           data: JSON.stringify(contactUs)
+       });
+}

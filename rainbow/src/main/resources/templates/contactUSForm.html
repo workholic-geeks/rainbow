@@ -1,18 +1,6 @@
 <head>
 <link rel="stylesheet"	href="css/bootstrap.min.css">
 <link rel="stylesheet" 	href="js/jquery.min.js">
-<script>
-	$(document).ready(function() {
-		$("button").click(function() {
-			$.ajax({
-				url : "sendEmail.json",
-				success : function(result) {
-					$("#div1").html(result);
-				}
-			});
-		});
-	});
-</script>
 </head>
 <body>
 	<div class="container">
@@ -35,7 +23,7 @@
 					<br> <i><h4 class="heading" style="color: #3A4792">Please
 							fill in your details to get a call from our Loan Expert!</h4></i> <br>
 					<br>
-					<form name="applyform" id="formId" action="">
+				
 
 						<div class="form-group">
 							<div class="select-wrapper">
@@ -79,9 +67,9 @@
 						</div>
 						<br>
 						<div id="div1"></div>
-						<button type="submit" class="btn btn-primary full-width">Submit</button>
+						<button type="submit" onClick="contactUs()" class="btn btn-primary full-width">Submit</button>
 						</br> </br>
-					</form>
+					
 				</div>
 
 			</div>

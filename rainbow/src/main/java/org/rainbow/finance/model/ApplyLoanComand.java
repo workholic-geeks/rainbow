@@ -17,6 +17,9 @@ public class ApplyLoanComand implements Command {
 	private Long phoneNumber;
 
 	private Long loanAmount;
+	
+	@NotNull
+	private String city;
 
 	private String comments;
 
@@ -26,6 +29,14 @@ public class ApplyLoanComand implements Command {
 	@NotNull(message = "Please provide a valid email.")
 	@Email
 	private String personEmail;
+	
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
 
 	public String getPersonEmail() {
 		return personEmail;
