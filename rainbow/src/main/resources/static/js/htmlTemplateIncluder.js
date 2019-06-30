@@ -80,7 +80,14 @@ function loadAboutUs() {
 	$("#welcome").load(url);
 	active("#aboutUsLink");
 }
-
+function loadChecklist(){
+	alert("hello Checklist loadChecklist()")
+	emptyAllSections();
+	removeAll();
+	var url = "http://" + hostName + port + "/rainbow/checklist.html";
+	$("#welcome").load(url);
+	active("#checklistLink");
+}
 function loadShortTermLoan(){
 	emptyAllSections();
 	removeAll();
