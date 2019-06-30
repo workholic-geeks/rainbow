@@ -94,43 +94,39 @@
 </div>
 
 
-<div class="form-popup" id="myForm">
-	<form action="/action_page.php" class="form-container">
+<div class="form-popup" id="myForm"style="background:white;">
+	<div class="form-group">
+		<div class="select-wrapper">
+			<select data-drupal-selector="edit-city"
+				class="form-select required form-control  " id="edit-city"
+				name="city" required="required" aria-required="true"><option
+					value="" selected="selected">Select your city</option>
+				<option value="Lusaka">Lusaka</option>
+			</select>
+		</div>
+	</div>
+	<div class="form-group  ">
+		<input name="name" id="li_display_name"
+			class="form-input-height form-control font12 radius-5 text-darkgrey font-weight400 text-capitalize  GAnalytica_Text  "
+			maxlength="50" placeholder="Enter your full name" value=""
+			type="text" required>
+	</div>
+	<div class="form-group  ">
+		<input name="mobileNo" id="li_display_mobileNo"
+			class="form-input-height form-control font12 radius-5 text-darkgrey font-weight400 text-capitalize  GAnalytica_Text"
+			maxlength="50" placeholder="Enter your mobile number" value=""
+			type="text" required>
+	</div>
 
-		<div class="form-group">
-			<div class="select-wrapper">
-				<select data-drupal-selector="edit-city"
-					class="form-select required form-control  " id="edit-city"
-					name="city" required="required" aria-required="true"><option
-						value="" selected="selected">Select your city</option>
-					<option value="Lusaka">Lusaka</option>
-				</select>
-			</div>
-		</div>
-		<div class="form-group  ">
-			<input name="name" id="li_display_name"
-				class="form-input-height form-control font12 radius-5 text-darkgrey font-weight400 text-capitalize  GAnalytica_Text  "
-				maxlength="50" placeholder="Enter your full name" value=""
-				type="text" required>
-		</div>
-		<div class="form-group  ">
-			<input name="mobileNo" id="li_display_mobileNo"
-				class="form-input-height form-control font12 radius-5 text-darkgrey font-weight400 text-capitalize  GAnalytica_Text"
-				maxlength="50" placeholder="Enter your mobile number" value=""
-				type="text" required>
-		</div>
-
-		<div class="form-group  ">
-			<input name="emailId" id="li_display_email"
-				class="form-input-height form-control font12 radius-5 text-darkgrey font-weight400 text-capitalize  GAnalytica_Text"
-				maxlength="50" placeholder="Enter your email ID" value=""
-				type="text" required>
-		</div>
-		<div id="div1"></div>
-		<button type="submit" class="btn btn-primary full-width padding"
-			onClick="contactUs()">Submit</button>
-		<button type="button" class="btn cancel padding" onclick="closeForm()">Close</button>
-	</form>
+	<div class="form-group  ">
+		<input name="emailId" id="li_display_email"
+			class="form-input-height form-control font12 radius-5 text-darkgrey font-weight400 text-capitalize  GAnalytica_Text"
+			maxlength="50" placeholder="Enter your email ID" value="" type="text"
+			required>
+	</div>
+	<div id="div1"></div>
+	<button type="submit" class="btn btn-primary full-width padding" onClick="contactUs()">Submit</button></br></br>
+	<button type="button" class="btn btn-primary full-width padding" onclick="closeForm()">Close</button>
 </div>
 
 <script>
@@ -141,5 +137,4 @@
 	function closeForm() {
 		document.getElementById("myForm").style.display = "none";
 	}
-
 </script>
