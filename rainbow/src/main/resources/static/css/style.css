@@ -1408,3 +1408,6 @@ li>a {
 .text-muted {
 	color: green;
 }
+.img-thumbnail{
+	border: none;
+}
