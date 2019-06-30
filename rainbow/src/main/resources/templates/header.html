@@ -65,7 +65,14 @@
                                     <li id="mediumTermLoan" ><a onclick="loadMediumTermLoan()" href="#MediumTermLoan">Medium Term Loan</a></li>
                                     <li id="longTermLoan" ><a onclick="loadLongTermLoan()" href="#LongTermLoan">Long Term Loan</a></li></ul>
                                     </div></li>
-                                    <li  id="calculatorLink" onclick="loadCalculator()"><a href="#calculator">Checklist & Calculators</a></li>
+                                    <li  id="calculatorLink"  class="calculatorLink"><a href="#calculatorLink">Checklist</a>
+                                    <div class="calculatorLinkDropDown">
+  									<ul>
+  									<li id="calculators" ><a onclick="loadCalculator()" href="#calculators">Calculators</a></li>
+ 									<li id="checklist" ><a onclick="loadChecklist()" href="#checklist">Checklist</a></li>
+  									</ul>
+ 									</div>
+                                    </li>
                                     <li id="faqLink" ><a onclick="loadFaq()" href="#faq">FAQ</a></li>
                                     <li  id="contactUsLink" onclick="loadContactUs()"><a href="#contactUs">Contact Us</a></li>
                                 </ul>

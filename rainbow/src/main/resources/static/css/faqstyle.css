@@ -90,6 +90,7 @@ Main components
   white-space: nowrap;
   border-bottom: 1px solid #555b61;
   text-overflow: ellipsis;
+  font-family: 'Roboto Slab', serif;
 }
 .cd-faq-categories a::before, .cd-faq-categories a::after {
   /* plus icon on the right */
@@ -126,6 +127,7 @@ Main components
     -webkit-transition: background 0.2s, padding 0.2s;
     -moz-transition: background 0.2s, padding 0.2s;
     transition: background 0.2s, padding 0.2s;
+    font-family: 'Roboto Slab', serif;
   }
   .cd-faq-categories a::before, .cd-faq-categories a::after {
     display: none;
@@ -143,8 +145,9 @@ Main components
     position: absolute;
     top: 0;
     left: 0;
-    width: 235px;
+    width: 213px;
     z-index: 2;
+    font-family: 'Roboto Slab', serif;
   }
   .cd-faq-categories a::before {
     /* decorative rectangle on the left visible for the selected item */
@@ -413,17 +416,21 @@ Main components
   font-size: 1.4rem;
   line-height: 1.4;
   color: #6c7d8e;
+  font-family: 'Roboto Slab', serif;
 }
 @media only screen and (min-width: 768px) {
   .cd-faq-content {
     display: none;
     padding: 0 24px 30px;
+    font-family: 'Roboto Slab', serif;
   }
   .cd-faq-content p {
     line-height: 1.6;
+    font-family: 'Roboto Slab', serif;
   }
   .no-js .cd-faq-content {
     display: block;
+    font-family: 'Roboto Slab', serif;
   }
 }
 

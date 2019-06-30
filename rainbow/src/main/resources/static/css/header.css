@@ -311,3 +311,37 @@
 }
 
 .loanProductsDropDown a:hover {background-color: #fff;}
+
+
+
+.calculatorLinkDropDown{
+  display: none;
+  position: relative;
+  background-color: #4DA91C;
+  z-index: 1;
+}
+.calculatorLink:hover .calculatorLinkDropDown {display: block;}
+
+
+.calculatorLink {
+  position: relative;
+  display: inline-block;
+}
+
+.calculatorLinkDropDown {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  z-index: 1;
+  min-width: 122%;
+}
+
+.calculatorLinkDropDown a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.calculatorLinkDropDown a:hover {background-color: #fff;}
