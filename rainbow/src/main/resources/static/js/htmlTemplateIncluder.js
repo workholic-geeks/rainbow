@@ -1,7 +1,7 @@
 var hostName;
 
 var intervalId;
-var port;
+var port=":8080";
 function emptyAllSections(){
 	$("#welcome").empty();
 	$("#calllogoinallpages").empty();
@@ -16,11 +16,8 @@ function preLoadHeader() {
 
 $(document).ready(function() {
 	hostName = window.location.hostname;
-	if("localhost"==hostName)
-		port=":8080";
-	else{
+	if("https"==window.location.protocol)
 		port="";
-	}
 	preLoadHeader();
 	homePage();
 	callIconLoader();
