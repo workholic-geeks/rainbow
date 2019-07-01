@@ -1414,3 +1414,23 @@ li>a {
 .img-thumbnail{
 	border: none;
 }
+.checklistHeading {
+	margin-left: 10%;
+	color: green;
+}
+.checklist-div {
+	width: 72%;
+	color: green;
+	text-align: center;
+	font-size: 15px;
+	font-weight: inherit;
+	margin-left: 15%;
+	margin-top: 2%;
+}
+.checklist-detail {
+	padding: 3%;
+}
+.CheckMark-image {
+	max-width: 3%;
+	float: left;
+}
