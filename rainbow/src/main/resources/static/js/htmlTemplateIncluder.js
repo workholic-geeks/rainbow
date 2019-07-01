@@ -80,13 +80,12 @@ function loadAboutUs() {
 	$("#welcome").load(url);
 	active("#aboutUsLink");
 }
-function loadChecklist(){
-	alert("hello Checklist loadChecklist()")
+function loadCheckListQuestion() {
 	emptyAllSections();
 	removeAll();
-	var url = "http://" + hostName + port + "/rainbow/checklist.html";
+	var url = "http://" + hostName + port + "/rainbow/checkListQuestion.html";
 	$("#welcome").load(url);
-	active("#checklistLink");
+	active("#checkListQuestionLink");
 }
 function loadShortTermLoan(){
 	emptyAllSections();
