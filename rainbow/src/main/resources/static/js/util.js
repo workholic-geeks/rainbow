@@ -40,8 +40,11 @@ function submitRequest(){
            dataType: "json",
            contentType: 'application/json',
            success: function (msg) {
-        	   if(msg.response.result=="success")
-        		    $("#myResponse").modal('toggle');
+			        	   if (msg.response.result == "success") {
+				$("#myResponse").modal('toggle');
+			} else {
+				$(".modal-backdrop").remove();
+			}
            },
 
            data: JSON.stringify(contactUs)
