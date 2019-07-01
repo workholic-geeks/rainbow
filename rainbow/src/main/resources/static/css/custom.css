@@ -22,7 +22,7 @@ width: 100%;
 }
 .w3-modal
 {
-	top: 30%;
+	top: 25%;
 }
 @media only screen and (min-width: 991px) {
   .applyForm {
@@ -54,6 +54,7 @@ width: 100%;
    }
   .modal-content {
     width: 52%;
+    margin-left: 15%;
   }
 	.loan-content {
 		font-size: 15px;
