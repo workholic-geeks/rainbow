@@ -94,7 +94,7 @@
 </div>
 
 
-<div class="form-popup" id="myForm"style="background:white;">
+<div class="form-popup" id="myForm" style="background: white;">
 	<div class="form-group">
 		<div class="select-wrapper">
 			<select data-drupal-selector="edit-city"
@@ -124,8 +124,27 @@
 			maxlength="50" placeholder="Enter your email ID" value="" type="text"
 			required>
 	</div>
-	<button type="submit" class="btn btn-primary full-width padding" onClick="contactUs()">Submit</button></br></br>
-	<button type="button" class="btn btn-primary full-width padding" onclick="closeForm()">Close</button>
+	<div id="myResponse" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<div class="modal-body">
+					<center>
+						<h4>Thank You For Contacting Us</h4>
+					</center>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<button type="submit" class="btn btn-primary full-width padding"
+		onClick="contactUs()">Submit</button>
+	</br>
+	</br>
+	<button type="button" class="btn btn-primary full-width padding"
+		onclick="closeForm()">Close</button>
 </div>
 
 <script>
