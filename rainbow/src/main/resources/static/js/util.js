@@ -40,9 +40,8 @@ function submitRequest(){
            dataType: "json",
            contentType: 'application/json',
            success: function (msg) {
-        	  // $("#div1").html(msg.response.result);
         	   if(msg.response.result=="success")
-        	      alert("Thanking you for Contact Us")
+        		    $("#myResponse").modal('toggle');
            },
 
            data: JSON.stringify(contactUs)
