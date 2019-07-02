@@ -42,6 +42,7 @@ function submitRequest(){
            success: function (msg) {
 			        	   if (msg.response.result == "success") {
 				$("#myResponse").modal('toggle');
+				$(".modal-backdrop").remove();
 			} else {
 				$(".modal-backdrop").remove();
 			}
