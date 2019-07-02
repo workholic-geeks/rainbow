@@ -47,7 +47,7 @@ public class EmailJob implements Job {
 	 * This will execute every day in midnight
 	 * 
 	 */
-	@Scheduled(cron = "0 0 * * *")
+	@Scheduled(cron = "0 0 * * * *")
 	@Override
 	public void execute() {
 		logger.info("-----------Starting Email job----------");

@@ -20,8 +20,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Component;
 
-@Component
-@Scope("prototype")
+
 public class EmailSender implements MailSender {
 
 	Logger logger = Logger.getLogger(this.getClass().getName());

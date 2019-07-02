@@ -4,4 +4,4 @@ mail.subject.title=Requesting to contact us.
 mail.body.template.name=mailBody
 mail.backup.file.name=email-error-backup.data
 mail.backup.file.dir=backup
-#mail.to.addresses=
+mail.to.addresses=

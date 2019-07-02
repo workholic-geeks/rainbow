@@ -9,6 +9,7 @@ import org.rainbow.finance.email.MailSenderFactory;
 import org.rainbow.finance.file.FilesUtility;
 import org.rainbow.finance.properties.MailProperties;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
 import org.springframework.context.annotation.Scope;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Component;
@@ -21,6 +22,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @Scope("singleton")
+@Profile("!dev")
 public class AppConfig implements org.rainbow.finance.contracts.app.AppConfig {
 
 	Logger logger = Logger.getLogger(this.getClass().getName());
