@@ -44,10 +44,10 @@ public class EmailJob implements Job {
 	private Logger logger = Logger.getLogger(this.getClass().getName());
 
 	/**
-	 * This will execute every day at 3pm
+	 * This will execute every day in midnight
 	 * 
 	 */
-	@Scheduled(cron = "0 15 * * * ?")
+	@Scheduled(cron = "0 0 * * *")
 	@Override
 	public void execute() {
 		logger.info("-----------Starting Email job----------");

@@ -4,14 +4,13 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javax.annotation.PreDestroy;
-import javax.mail.Session;
 
 import org.rainbow.finance.email.MailSenderFactory;
 import org.rainbow.finance.file.FilesUtility;
 import org.rainbow.finance.properties.MailProperties;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Component;
 
 /**
@@ -35,8 +34,9 @@ public class AppConfig implements org.rainbow.finance.contracts.app.AppConfig {
 
 	@Autowired
 	private MailProperties mailProperties;
-
-	private Session session;
+	
+	@Autowired
+	private JavaMailSender mailSender;
 
 	@Override
 	public void initConfig() {
@@ -53,11 +53,6 @@ public class AppConfig implements org.rainbow.finance.contracts.app.AppConfig {
 		logger.info("----------App Initialization finished---------");
 	}
 
-	@Autowired
-	@Qualifier("smtpSession")
-	public void setSession(Session session) {
-		this.session = session;
-	}
 
 	@Override
 	@PreDestroy
@@ -65,9 +60,8 @@ public class AppConfig implements org.rainbow.finance.contracts.app.AppConfig {
 		try {
 			logger.info("-------Destroying app------------");
 
-			if (session != null) {
-				if (session.getTransport() != null)
-					session.getTransport().close();
+			if (mailSender != null) {
+				mailSender=null;
 
 			}
 

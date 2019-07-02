@@ -10,19 +10,19 @@ import org.springframework.stereotype.Component;
 @PropertySource("classpath:mail/mail.obj")
 public class MailProperties {
 
-	@Value("${mail.smtp.starttls.enable}")
+	// @Value("${mail.smtp.starttls.enable}")
 	private Boolean starttlsEnabled;
 
-	@Value("${mail.smtp.auth}")
+	// @Value("${mail.smtp.auth}")
 	private Boolean smtpAuth;
 
-	@Value("${mail.smtp.host}")
+	// @Value("${mail.smtp.host}")
 	private String smtpAddress;
 
-	@Value("${mail.smtp.port}")
+	// @Value("${mail.smtp.port}")
 	private Long smtpPort;
 
-	@Value("${mail.from.address}")
+	@Value("${mail.to.address}")
 	private String toMail;
 
 	@Value("${mail.to.address}")
@@ -31,14 +31,30 @@ public class MailProperties {
 	@Value("${mail.subject.title}")
 	private String mailSubject;
 
-	@Value("${mail.password}")
+	// @Value("${mail.password}")
 	private String password;
 
 	@Value("${mail.body.template.name}")
 	private String mailBodyFileName;
-	
+
 	@Value("${mail.backup.file.dir}")
 	private String backupDir;
+
+	@Value("${mail.to.addresses}")
+	private String toMails;
+
+	private String[] cc;
+
+	public String[] getToMails() {
+		if (toMails != null && cc == null) {
+			cc = toMails.split(",");
+		}
+		return cc;
+	}
+
+	public void setToMails(String toMails) {
+		this.toMails = toMails;
+	}
 
 	public Boolean getStarttlsEnabled() {
 		return starttlsEnabled;

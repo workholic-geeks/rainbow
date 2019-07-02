@@ -31,7 +31,6 @@ public class FlowStrategyFactory implements FlowStrategy {
 	}
 
 	@Bean("strategy")
-	// @Qualifier("strategy")
 	@Scope("singleton")
 	public FlowStrategy getInstance() {
 		return new FlowStrategyFactory();

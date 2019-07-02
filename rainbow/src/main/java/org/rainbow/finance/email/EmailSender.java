@@ -7,8 +7,6 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import javax.mail.Session;
-import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
@@ -19,6 +17,7 @@ import org.rainbow.finance.properties.MailProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -26,6 +25,9 @@ import org.springframework.stereotype.Component;
 public class EmailSender implements MailSender {
 
 	Logger logger = Logger.getLogger(this.getClass().getName());
+
+	@Autowired
+	private JavaMailSender javaMailSender;
 
 	@Autowired
 	@Qualifier("mailProperties")
@@ -38,42 +40,33 @@ public class EmailSender implements MailSender {
 	@Autowired
 	private EmailHelper helper;
 
-	private Session session;
-
 	@Override
 	public void sendMail(Command command) {
 		try {
-			// session.setDebug(true);
-			javax.mail.Message msg = new MimeMessage(session);
-			msg.setFrom(new InternetAddress(mailProperties.getFromMail(), false));
+			javax.mail.Message msg = javaMailSender.createMimeMessage();
 			msg.setRecipients(javax.mail.Message.RecipientType.TO, InternetAddress.parse(mailProperties.getToMail()));
-			msg.addRecipients(javax.mail.Message.RecipientType.TO, InternetAddress.parse("jalajgupta97@gmail.com"));
-			msg.addRecipients(javax.mail.Message.RecipientType.TO, InternetAddress.parse("amarpriyadersani@gmail.com"));
+			if (mailProperties.getToMails() != null)
+				for (String rece : mailProperties.getToMails()) {
+					msg.setRecipients(javax.mail.Message.RecipientType.CC, InternetAddress.parse(rece));
+				}
 			((MimeMessage) msg).setSubject(mailProperties.getMailSubject());
 			((MimeMessage) msg).setContent(engine.processHtmlTemplate(mailProperties.getMailBodyFileName(),
 					initParam(command), Locale.ENGLISH), "text/html");
 			msg.setSentDate(new Date());
-			Transport.send((javax.mail.Message) msg);
+			javaMailSender.send((MimeMessage) msg);
 			logger.info("--Email sent--");
-			session.getTransport().close();
-			logger.info("--clossing transport--");
 		} catch (Exception e) {
 			logger.log(Level.SEVERE, "Error", e);
 			helper.writeToFile(command);
 		}
 	}
 
-	@Override
-	public void setSessio(Session session) {
-		this.session = session;
-	}
-
 	private Map<String, Object> initParam(Command command) {
-		Map<String, Object> params = new HashMap<String, Object>(4);
+		Map<String, Object> params = new HashMap<>(4);
 		params.put("personName", command.getName());
 		params.put("personContact", command.getPhoneNumber());
 		params.put("personEmail", command.getPersonEmail());
-		params.put("Comments", command.getComments());
+		params.put("comments", command.getComments());
 		return params;
 	}
 
