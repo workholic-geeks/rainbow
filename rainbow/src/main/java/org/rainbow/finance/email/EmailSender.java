@@ -16,11 +16,12 @@ import org.rainbow.finance.contracts.template.TemplateEngine;
 import org.rainbow.finance.properties.MailProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.Profile;
 import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-
+@Service
+@Profile("!dev")
 public class EmailSender implements MailSender {
 
 	Logger logger = Logger.getLogger(this.getClass().getName());

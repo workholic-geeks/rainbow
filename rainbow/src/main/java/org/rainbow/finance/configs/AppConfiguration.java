@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Profile;
 @Configuration
 public class AppConfiguration {
 	
-	@Bean 
+	@Bean
 	public MailSender mailSender() {
 		return new EmailSender();
 	}
