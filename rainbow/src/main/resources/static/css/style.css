@@ -1421,7 +1421,6 @@ li>a {
 .checklist-div {
 	width: 72%;
 	color: green;
-	text-align: center;
 	font-size: 15px;
 	font-weight: inherit;
 	margin-left: 15%;
@@ -1433,4 +1432,7 @@ li>a {
 .CheckMark-image {
 	max-width: 3%;
 	float: left;
+}
+.checklist-subhead{
+text-align: center;
 }

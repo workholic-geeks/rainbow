@@ -157,14 +157,14 @@ Main components
     left: 0;
     height: 100%;
     width: 3px;
-    background-color: #a9c056;
+    background-color: #f7f9f2;
     opacity: 0;
     -webkit-transition: opacity 0.2s;
     -moz-transition: opacity 0.2s;
     transition: opacity 0.2s;
   }
   .cd-faq-categories .selected {
-    background: #42464b !important;
+    background: #f3f3f5 !important;
   }
   .cd-faq-categories .selected::before {
     opacity: 1;
