@@ -59,11 +59,11 @@ function submitRequest(){
 		var result = true;
 		if (isEmpty(name) || isEmpty(city) || isEmpty(phoneNumber)
 				|| isEmpty(emailId)) {
-			alert("Please Enter the valid required data");
+			alert("Please enter the valid required data");
 			result = false;
 		} else {
 			if (isNaN(phoneNumber) && phoneNumber.length < 10) {
-				alert("please enter a valid mobile number");
+				alert("Please enter a valid mobile number");
 				result = false;
 			} else {
 				var atposition = emailId.indexOf("@");
