@@ -14,7 +14,6 @@ Primary style
 }
 
 body {
-  font-size: 100%;
   font-family: "Open Sans", sans-serif;
   color: #4e5359;
   background-color: #f3f3f5;
@@ -83,7 +82,7 @@ Main components
   height: 50px;
   line-height: 50px;
   padding: 0 28px 0 16px;
-  background-color: #4e5359;
+  background-color: #9ba3ad;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #ffffff;
