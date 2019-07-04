@@ -62,7 +62,7 @@ function submitRequest(){
 			alert("Please enter the valid required data");
 			result = false;
 		} else {
-			if (isNaN(phoneNumber) && phoneNumber.length < 10) {
+			if (isNaN(phoneNumber) || phoneNumber.length < 10) {
 				alert("Please enter a valid mobile number");
 				result = false;
 			} else {
