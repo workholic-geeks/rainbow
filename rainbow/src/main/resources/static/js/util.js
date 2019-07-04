@@ -34,6 +34,9 @@ function submitRequest(){
 	name:name,
 	city:city,
 	personEmail:emailId};
+	
+	if(isValid())
+    {
 	 $.ajax({
            type: "post",
            url: "/rainbow/sendMail.json",
@@ -50,4 +53,32 @@ function submitRequest(){
 
            data: JSON.stringify(contactUs)
        });
+    }
+   function isValid()
+     {
+		var result = true;
+		if (isEmpty(name) || isEmpty(city) || isEmpty(phoneNumber)
+				|| isEmpty(emailId)) {
+			alert("Please enter the valid required data");
+			result = false;
+		} else {
+			if (isNaN(phoneNumber) || phoneNumber.length < 10) {
+				alert("Please enter a valid mobile number");
+				result = false;
+			} else {
+				var atposition = emailId.indexOf("@");
+				var dotposition = emailId.lastIndexOf(".");
+				if (atposition < 1 || dotposition < atposition + 2
+						|| dotposition + 2 >= emailId.length) {
+					alert("Please enter a valid e-mail address");
+					result = false;
+				}
+			}
+		}
+		return result;
+	}
+   
+   function isEmpty(val){
+	    return (val === undefined || val == null || val.length <= 0) ? true : false;
+	}
 }
