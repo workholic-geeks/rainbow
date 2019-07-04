@@ -33,4 +33,19 @@ public class LoanProductController {
 	public String longTermSlider() {
 		return "autoSliderLongTermLoan.html";
 	}
+	
+	@GetMapping(value="/shortTermLoanCalc.html")
+	public String shortTermLoanCalc() {
+		return "shortTermEmiCalculator.html";
+	}
+	
+	@GetMapping(value="/mediumTermLoanCalc.html")
+	public String mediumTermLoanCalc() {
+		return "mediumTermEmiCalculator.html";
+	}
+	
+	@GetMapping(value="/longTermLoanCalc.html")
+	public String longTermLoanCalc() {
+		return "longTermEmiCalculator.html";
+	}
 }

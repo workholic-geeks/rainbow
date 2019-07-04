@@ -90,12 +90,12 @@ function loadCheckListQuestion() {
 function loadShortTermLoan(){
 	emptyAllSections();
 	removeAll();
-	$("#calllogoinallpages").load("http://" + hostName + port + "/rainbow/emiCalculator.html",function(){
+	$("#calllogoinallpages").load("http://" + hostName + port + "/rainbow/shortTermLoanCalc.html",function(){
 		$("#rateOfInterest").hide();
-		var output = document.getElementById("displayInterest");
+		var output = document.getElementById("rate1");
 		output.value = 42;
-		$("#displayRepaymentmonth").val(6);
-		$("#displayLoanAmount").val(5000);
+		//$("#displayRepaymentmonth").val(6);
+		//$("#displayLoanAmount").val(5000);
 		calculteEMI();
 	});
 	var url = "http://" + hostName + port + "/rainbow/shortTermLoan.html";
@@ -117,12 +117,12 @@ function loadShortTermLoan(){
 function loadLongTermLoan(){
 	emptyAllSections();
 	removeAll();
-	$("#calllogoinallpages").load("http://" + hostName + port + "/rainbow/emiCalculator.html",function(){
+	$("#calllogoinallpages").load("http://" + hostName + port + "/rainbow/longTermLoanCalc.html",function(){
 		$("#rateOfInterest").hide();
-		var output = document.getElementById("displayInterest");
+		var output = document.getElementById("rate1");
 		output.value = 42;
-		$("#displayRepaymentmonth").val(24);
-		$("#displayLoanAmount").val(10000);
+		//$("#displayRepaymentmonth").val(24);
+		//$("#displayLoanAmount").val(10000);
 		calculteEMI();
 	});
 	var url = "http://" + hostName + port + "/rainbow/longTermLoan.html";
@@ -144,13 +144,13 @@ function loadLongTermLoan(){
 function loadMediumTermLoan(){
 	emptyAllSections();
 	removeAll();
-	$("#calllogoinallpages").load("http://" + hostName + port + "/rainbow/emiCalculator.html",function(){
+	$("#calllogoinallpages").load("http://" + hostName + port + "/rainbow/mediumTermLoanCalc.html",function(){
 		$("#rateOfInterest").hide();
-		var output = document.getElementById("displayInterest");
+		var output = document.getElementById("rate1");
 		output.value = 42;
 		//$("#displayInterest").val(42);
-		$("#displayRepaymentmonth").val(12);
-		$("#displayLoanAmount").val(10000);
+	//	$("#displayRepaymentmonth").val(12);
+		//$("#displayLoanAmount").val(10000);
 		calculteEMI();
 	});
 	var url = "http://" + hostName + port + "/rainbow/mediumTermLoan.html";
