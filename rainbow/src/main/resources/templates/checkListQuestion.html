@@ -1,211 +1,425 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<script src="js/jquery-1.12.3.min.js"></script>
 
-<div class="checklistHeading"
-	style="text-align: left; margin-left: 42%;">
-	<h3>
-		<b>CHECKLIST QUESTIONS </b>
-	</h3>
-</div>
-<hr>
-<div class="checklist-div">
-	<span><h4 class="checklist-subhead">How it works</h4> </span><br>
-	<hr>
-	<span>find out more on our flexi loans process. We offer
-		different options to suit your needs. In a box at the bottom – apply
-		now </span><br>
-	<table>
-		<tr>
-			<td>
-				<div class="checklist-detail">
-					<div>
-						<img class="CheckMark-image" alt="" src="img/green-check-mark.jpg">
-					</div>
-					<div>confirm with your employer (HR Department) if any MOU
-						has been signed up with us.</div>
-				</div>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<div class="checklist-detail">
-					<div>
-						<img class="CheckMark-image" alt="" src="img/green-check-mark.jpg">
-					</div>
-					<div>Fill in our simple loan application form that will be
-						provided. Our marketing team are available to help you through the
-						process and collect the application along with necessary
-						documents. -</div>
-				</div>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<div class="checklist-detail">
-					<div>
-						<img class="CheckMark-image" alt="" src="img/green-check-mark.jpg">
-					</div>
-					<div>Rainbow capital will evaluate your loan application and
-						make a decision. You will be informed as to whether its declined
-						or approved accordingly.</div>
-				</div>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<div class="checklist-detail">
-					<div>
-						<img class="CheckMark-image" alt="" src="img/green-check-mark.jpg">
-					</div>
-					<div>Upon approval the loan funds will be disbursed to your
-						account or mobile money account.</div>
-				</div>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<div class="checklist-detail">
-					<div>
-						<img class="CheckMark-image" alt="" src="img/green-check-mark.jpg">
-					</div>
-					<div>The Loan instalments will be deducted directly from your
-						salary by HR Department.</div>
-				</div>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<div class="checklist-detail">
-					<div>
-						<img class="CheckMark-image" alt="" src="img/green-check-mark.jpg">
-					</div>
-					<div>Loan Tenor - payable within a period of 1 to 6 months.</div>
-				</div>
-			</td>
-		</tr>
-	</table>
-</div>
+<script>
+	jQuery(document)
+			.ready(
+					function($) {
+						//update these values if you change these breakpoints in the style.css file (or _layout.scss if you use SASS)
+						var MqM = 768, MqL = 1024;
+
+						var faqsSections = $('.cd-faq-group'), faqTrigger = $('.cd-faq-trigger'), faqsContainer = $('.cd-faq-items'), faqsCategoriesContainer = $('.cd-faq-categories'), faqsCategories = faqsCategoriesContainer
+								.find('a'), closeFaqsContainer = $('.cd-close-panel');
+
+						//select a faq section 
+						faqsCategories
+								.on(
+										'click',
+										function(event) {
+											event.preventDefault();
+											var selectedHref = $(this).attr(
+													'href'), target = $(selectedHref);
+											if ($(window).width() < MqM) {
+												faqsContainer
+														.scrollTop(0)
+														.addClass('slide-in')
+														.children('ul')
+														.removeClass('selected')
+														.end().children(
+																selectedHref)
+														.addClass('selected');
+												closeFaqsContainer
+														.addClass('move-left');
+												$('body')
+														.addClass('cd-overlay');
+											} else {
+												$('body,html')
+														.animate(
+																{
+																	'scrollTop' : target
+																			.offset().top - 19
+																}, 200);
+											}
+										});
+
+						//close faq lateral panel - mobile only
+						$('body').bind(
+								'click touchstart',
+								function(event) {
+									if ($(event.target).is('body.cd-overlay')
+											|| $(event.target).is(
+													'.cd-close-panel')) {
+										closePanel(event);
+									}
+								});
+						faqsContainer.on('swiperight', function(event) {
+							closePanel(event);
+						});
+
+						//show faq content clicking on faqTrigger
+						faqTrigger.on('click', function(event) {
+							event.preventDefault();
+							$(this).next('.cd-faq-content').slideToggle(200)
+									.end().parent('li').toggleClass(
+											'content-visible');
+						});
+
+						//update category sidebar while scrolling
+						$(window)
+								.on(
+										'scroll',
+										function() {
+											if ($(window).width() > MqL) {
+												(!window.requestAnimationFrame) ? updateCategory()
+														: window
+																.requestAnimationFrame(updateCategory);
+											}
+										});
+
+						$(window)
+								.on(
+										'resize',
+										function() {
+											if ($(window).width() <= MqL) {
+												faqsCategoriesContainer
+														.removeClass('is-fixed')
+														.css(
+																{
+																	'-moz-transform' : 'translateY(0)',
+																	'-webkit-transform' : 'translateY(0)',
+																	'-ms-transform' : 'translateY(0)',
+																	'-o-transform' : 'translateY(0)',
+																	'transform' : 'translateY(0)',
+																});
+											}
+											if (faqsCategoriesContainer
+													.hasClass('is-fixed')) {
+												faqsCategoriesContainer.css({
+													'left' : faqsContainer
+															.offset().left,
+												});
+											}
+										});
+
+						function closePanel(e) {
+							e.preventDefault();
+							faqsContainer.removeClass('slide-in').find('li')
+									.show();
+							closeFaqsContainer.removeClass('move-left');
+							$('body').removeClass('cd-overlay');
+						}
+
+						function updateCategory() {
+							updateCategoryPosition();
+							updateSelectedCategory();
+						}
+
+						function updateCategoryPosition() {
+							var top = $('.cd-faq').offset().top, height = jQuery(
+									'.cd-faq').height()
+									- jQuery('.cd-faq-categories').height(), margin = 20;
+							if (top - margin <= $(window).scrollTop()
+									&& top - margin + height > $(window)
+											.scrollTop()) {
+								var leftValue = faqsCategoriesContainer
+										.offset().left, widthValue = faqsCategoriesContainer
+										.width();
+								faqsCategoriesContainer
+										.addClass('is-fixed')
+										.css(
+												{
+													'left' : leftValue,
+													'top' : margin,
+													'-moz-transform' : 'translateZ(0)',
+													'-webkit-transform' : 'translateZ(0)',
+													'-ms-transform' : 'translateZ(0)',
+													'-o-transform' : 'translateZ(0)',
+													'transform' : 'translateZ(0)',
+												});
+							} else if (top - margin + height <= $(window)
+									.scrollTop()) {
+								var delta = top - margin + height
+										- $(window).scrollTop();
+								faqsCategoriesContainer
+										.css({
+											'-moz-transform' : 'translateZ(0) translateY('
+													+ delta + 'px)',
+											'-webkit-transform' : 'translateZ(0) translateY('
+													+ delta + 'px)',
+											'-ms-transform' : 'translateZ(0) translateY('
+													+ delta + 'px)',
+											'-o-transform' : 'translateZ(0) translateY('
+													+ delta + 'px)',
+											'transform' : 'translateZ(0) translateY('
+													+ delta + 'px)',
+										});
+							} else {
+								faqsCategoriesContainer.removeClass('is-fixed')
+										.css({
+											'left' : 0,
+											'top' : 0,
+										});
+							}
+						}
+
+						function updateSelectedCategory() {
+							faqsSections
+									.each(function() {
+										var actual = $(this), margin = parseInt($(
+												'.cd-faq-title').eq(1).css(
+												'marginTop').replace('px', '')), activeCategory = $('.cd-faq-categories a[href="#'
+												+ actual.attr('id') + '"]'), topSection = (activeCategory
+												.parent('li')
+												.is(':first-child')) ? 0 : Math
+												.round(actual.offset().top);
+
+										if ((topSection - 20 <= $(window)
+												.scrollTop())
+												&& (Math
+														.round(actual.offset().top)
+														+ actual.height()
+														+ margin - 20 > $(
+														window).scrollTop())) {
+											activeCategory.addClass('selected');
+										} else {
+											activeCategory
+													.removeClass('selected');
+										}
+									});
+						}
+					});
+</script>
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
 
 
-<div class="checklist-div">
-	<hr>
-	<span><h4 class="checklist-subhead">What do I need to apply</h4> </span><br>
-	<hr>
-	<table>
-		<tr>
-			<td>
-				<div class="checklist-detail">
-					<div>
-						<img class="CheckMark-image" alt="" src="img/green-check-mark.jpg">
-					</div>
-					<div>Signed up MOU with your organisation</div>
-				</div>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<div class="checklist-detail">
-					<div>
-						<img class="CheckMark-image" alt="" src="img/green-check-mark.jpg">
-					</div>
-					<div>Copy of valid identity card e.g NRC, Passport or Driving
-						licence</div>
-				</div>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<div class="checklist-detail">
-					<div>
-						<img class="CheckMark-image" alt="" src="img/green-check-mark.jpg">
-					</div>
-					<div>Recommendation by employer.</div>
-				</div>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<div class="checklist-detail">
-					<div>
-						<img class="CheckMark-image" alt="" src="img/green-check-mark.jpg">
-					</div>
-					<div>One recent passport size photo</div>
-				</div>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<div class="checklist-detail">
-					<div>
-						<img class="CheckMark-image" alt="" src="img/green-check-mark.jpg">
-					</div>
-					<div>Three (3) latest payslips</div>
-				</div>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<div class="checklist-detail">
-					<div>
-						<img class="CheckMark-image" alt="" src="img/green-check-mark.jpg">
-					</div>
-					<div>Three (3) months latest bank statement.</div>
-				</div>
-			</td>
-		</tr>
-	</table>
-</div>
+<link rel="stylesheet" href="css/faqstyle.css">
+<!-- Resource style -->
+<script src="js/modernizr.js"></script>
+<!-- Modernizr -->
 
-<div class="checklist-div">
-	<hr>
-	<span><h4 class="checklist-subhead">How to apply</h4> </span><br>
-	<hr>
-	<br>
-	<table>
-		<tr>
-			<td>
-				<div class="checklist-detail">
-					<div>
-						<img class="CheckMark-image" alt="" src="img/green-check-mark.jpg">
-					</div>
-					<div>The application forms will be made available to your
-						offices by our marketing representatives</div>
-				</div>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<div class="checklist-detail">
-					<div>
-						<img class="CheckMark-image" alt="" src="img/green-check-mark.jpg">
-					</div>
-					<div>or our offices at House #1 Rhodes Park Off Addis Ababa
-						Road Lusaka and meet with our staff who will guide you through the
-						application process ( show google map)</div>
-				</div>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<div class="checklist-detail">
-					<div>
-						<img class="CheckMark-image" alt="" src="img/green-check-mark.jpg">
-					</div>
-					<div>Contact us on 0976202967.dispaly a phone or mobile
-						person or Send us a call me back message and we will get in touch
-						wit you.</div>
-				</div>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<div class="checklist-detail">
-					<div>
-						<img class="CheckMark-image" alt="" src="img/green-check-mark.jpg">
-					</div>
-					<div>- Send us an email on info.rainbowcapital@gmail.com</div>
-				</div>
-			</td>
-		</tr>
-	</table>
-</div>
+
+
+<title>FAQ Template | CodyHouse</title>
+</head>
+<body>
+
+	<section class="cd-faq">
+		<ul class="cd-faq-categories">
+			<li><a class="selected" href="#Howitworks">How it works</a></li>
+			<li><a href="#WhatdoIneedtoapply">What do I need to apply</a></li>
+			<li><a href="#Howtoapply">How to apply</a></li>
+		</ul>
+		<!-- cd-faq-categories -->
+		<div class="cd-faq-items">
+			<ul id="Howitworks" class="cd-faq-group">
+				<li class="cd-faq-title"><h2>How it works</h2></li>
+				<li><a class="cd-faq-trigger" href="#0">find out more on
+						our flexi loans process. We offer different options to suit your
+						needs. To know more click here </a>
+					<div class="cd-faq-content">
+						<div class="checklist-detail">
+							<div>
+								<img class="CheckMark-image" alt=""
+									src="img/green-check-mark.jpg">
+							</div>
+							<div>
+								<p>confirm with your employer (HR Department) if any MOU has
+									been signed up with us.</p>
+							</div>
+						</div>
+						<div class="checklist-detail">
+							<div>
+								<img class="CheckMark-image" alt=""
+									src="img/green-check-mark.jpg">
+							</div>
+							<div>
+								<p>Fill in our simple loan application form that will be
+									provided. Our marketing team are available to help you through
+									the process and collect the application along with necessary
+									documents.</p>
+							</div>
+						</div>
+						<div class="checklist-detail">
+							<div>
+								<img class="CheckMark-image" alt=""
+									src="img/green-check-mark.jpg">
+							</div>
+							<div>
+								<p>Rainbow capital will evaluate your loan application and
+									make a decision. You will be informed as to whether its
+									declined or approved accordingly.</p>
+							</div>
+						</div>
+						<div class="checklist-detail">
+							<div>
+								<img class="CheckMark-image" alt=""
+									src="img/green-check-mark.jpg">
+							</div>
+							<div>
+								<p>Upon approval the loan funds will be disbursed to your
+									account or mobile money account.</p>
+							</div>
+						</div>
+						<div class="checklist-detail">
+							<div>
+								<img class="CheckMark-image" alt=""
+									src="img/green-check-mark.jpg">
+							</div>
+							<div>
+								<p>The Loan instalments will be deducted directly from your
+									salary by HR Department.</p>
+							</div>
+						</div>
+						<div class="checklist-detail">
+							<div>
+								<img class="CheckMark-image" alt=""
+									src="img/green-check-mark.jpg">
+							</div>
+							<div>
+								<p>Loan Tenor - payable within a period of 1 to 6 months.</p>
+							</div>
+						</div>
+						<div class="checklist-detail">
+							<div>
+								<img class="CheckMark-image" alt=""
+									src="img/green-check-mark.jpg">
+							</div>
+							<div>
+								<p>Fill in our simple loan application form that will be
+									provided. Our marketing team are available to help you through
+									the process and collect the application along with necessary
+									documents.</p>
+							</div>
+						</div>
+					</div> <!-- cd-faq-content --></li>
+
+			</ul>
+
+			<ul id="WhatdoIneedtoapply" class="cd-faq-group">
+				<li class="cd-faq-title"><h2>What do I need to apply</h2></li>
+				<li><a class="cd-faq-trigger" href="#0">What do I need to
+						apply ? To know more click here</a>
+					<div class="cd-faq-content">
+						<div class="checklist-detail">
+							<div>
+								<img class="CheckMark-image" alt=""
+									src="img/green-check-mark.jpg">
+							</div>
+							<div>
+								<p>Signed up MOU with your organisation</p>
+							</div>
+						</div>
+						<div class="checklist-detail">
+							<div>
+								<img class="CheckMark-image" alt=""
+									src="img/green-check-mark.jpg">
+							</div>
+							<div>
+								<p>Copy of valid identity card e.g NRC, Passport or Driving
+									licence</p>
+							</div>
+						</div>
+						<div class="checklist-detail">
+							<div>
+								<img class="CheckMark-image" alt=""
+									src="img/green-check-mark.jpg">
+							</div>
+							<div>
+								<p>Recommendation by employer.</p>
+							</div>
+						</div>
+						<div class="checklist-detail">
+							<div>
+								<img class="CheckMark-image" alt=""
+									src="img/green-check-mark.jpg">
+							</div>
+							<div>
+								<p>One recent passport size photo</p>
+							</div>
+						</div>
+						<div class="checklist-detail">
+							<div>
+								<img class="CheckMark-image" alt=""
+									src="img/green-check-mark.jpg">
+							</div>
+							<div>
+								<p>Three (3) latest payslips</p>
+							</div>
+						</div>
+						<div class="checklist-detail">
+							<div>
+								<img class="CheckMark-image" alt=""
+									src="img/green-check-mark.jpg">
+							</div>
+							<div>
+								<p>Three (3) months latest bank statement.</p>
+							</div>
+						</div>
+					</div></li>
+			</ul>
+			<ul id="Howtoapply" class="cd-faq-group">
+				<li class="cd-faq-title"><h2>How to apply</h2></li>
+				<li><a class="cd-faq-trigger" href="#0">How to apply? click
+						here to know more</a>
+					<div class="cd-faq-content">
+						<div class="checklist-detail">
+							<div>
+								<img class="CheckMark-image" alt=""
+									src="img/green-check-mark.jpg">
+							</div>
+							<div>
+								<p>The application forms will be made available to your
+									offices by our marketing representatives</p>
+							</div>
+						</div>
+						<div class="checklist-detail">
+							<div>
+								<img class="CheckMark-image" alt=""
+									src="img/green-check-mark.jpg">
+							</div>
+							<div>
+								<p>or our offices at House #1 Rhodes Park Off Addis Ababa
+									Road Lusaka and meet with our staff who will guide you through
+									the application process ( show google map)</p>
+							</div>
+						</div>
+						<div class="checklist-detail">
+							<div>
+								<img class="CheckMark-image" alt=""
+									src="img/green-check-mark.jpg">
+							</div>
+							<div>
+								<p>Contact us on 0976202967.dispaly a phone or mobile person
+									or Send us a call me back message and we will get in touch wit
+									you.</p>
+							</div>
+						</div>
+						<div class="checklist-detail">
+							<div>
+								<img class="CheckMark-image" alt=""
+									src="img/green-check-mark.jpg">
+							</div>
+							<div>
+								<p>Send us an email on info.rainbowcapital@gmail.com</p>
+							</div>
+						</div>
+					</div> <!-- cd-faq-content --></li>
+
+			</ul>
+
+		</div>
+		<!-- cd-faq-items -->
+		<a href="#0" class="cd-close-panel">Close</a>
+	</section>
+	<!-- cd-faq -->
+
+
+</body>
+</html>
