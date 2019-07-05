@@ -22,5 +22,9 @@ public class WelcomeController {
 	public String header() {
 		return "header";
 	}
-
+	
+	@GetMapping("/autoSliderHomePage.html")
+	public String homePageSlider() {
+		return "autoSliderHomePage";
+	}
 }

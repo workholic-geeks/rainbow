@@ -40,7 +40,9 @@ function homePage() {
 	emptyAllSections();
 	removeAll();
 	var url = "http://" + hostName + port + "/rainbow/homepage.html";
-	$("#welcome").load(url);
+	$("#welcome").load(url,function(){
+		loadHomePageSlider();
+	});
 	active("#homeLink");
 }
 
@@ -169,4 +171,20 @@ function loadMediumTermLoan(){
 	$("#homepage").load(url);
 	
 	
+}
+
+
+function loadHomePageSlider(){
+	$("#homeSlider").load("http://" + hostName + port + "/rainbow/autoSliderHomePage.html",function(){
+		$("#slideshow > div:gt(0)").hide();
+		intervalId=setInterval(function() { 
+		  $('#slideshow > div:first')
+		    .fadeOut(1000)
+		    .next()
+		    .fadeIn(1000)
+		    .end()
+		    .appendTo('#slideshow');
+		},  3000);
+		active("#shortTermLoan");
+	});
 }
