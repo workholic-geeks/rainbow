@@ -4,30 +4,6 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
-<script>
-	function emi() {
-		var pay1 = '';
-		var princ1 = document.getElementById('displayLoanAmount').value;
-		var term1 = document.getElementById('displayRepaymentmonth').value;
-		var intr1 = document.getElementById('rate1').value / 1200;
-		document.getElementById('pay1').value = Math.round(princ1 * intr1
-				/ (1 - (Math.pow(1 / (1 + intr1), term1))) * 100) / 100;
-	}
-	function displayValue() {
-		var slider = document.getElementById("loan1");
-		var output = document.getElementById("displayLoanAmount");
-		output.value = slider.value;
-	}
-	function displaymonth() {
-		var slider = document.getElementById("months1");
-		var output = document.getElementById("displayRepaymentmonth");
-		output.value = slider.value;
-		
-	}
-	function calculteEMI(){
-	emi();
-	}
-</script>
 </head>
 <style>
 .width100{
@@ -113,8 +89,8 @@ text-align: center;
 				<div class="input-group">
 					<span class="input-group-addon"> <span
 						class="glyphicon glyphicon-rupee">K</span>
-					</span> <input type="number" id="displayLoanAmount" class="form-control "
-						value="80000" tabindex="1" placeholder="Loan Amount">
+					</span> <input type="text" id="displayLoanAmount" class="form-control "
+						value="80000" tabindex="1" placeholder="Loan Amount" oninput="validateNumber(this)">
 				</div>
 			</div>
 			<div>
@@ -130,8 +106,8 @@ text-align: center;
 				<div class="input-group">
 					<span class="input-group-addon"> <span
 						class="glyphicon glyphicon-time"></span>
-					</span> <input type="number" id="displayRepaymentmonth"
-						value="20" class="form-control" tabindex="3" placeholder="Loan Tenure">
+					</span> <input type="text" id="displayRepaymentmonth"
+						value="20" class="form-control" tabindex="3" placeholder="Loan Tenure" oninput="validateNumberTenor(this)">
 				</div>
 			</div>
 			<div>

@@ -94,8 +94,8 @@ function loadShortTermLoan(){
 		$("#rateOfInterest").hide();
 		var output = document.getElementById("rate1");
 		output.value = 42;
-		//$("#displayRepaymentmonth").val(6);
-		//$("#displayLoanAmount").val(5000);
+		lastValid = document.getElementById("displayLoanAmount").value;
+		lastTenor = document.getElementById("displayRepaymentmonth").value;
 		calculteEMI();
 	});
 	var url = "http://" + hostName + port + "/rainbow/shortTermLoan.html";
@@ -121,8 +121,8 @@ function loadLongTermLoan(){
 		$("#rateOfInterest").hide();
 		var output = document.getElementById("rate1");
 		output.value = 42;
-		//$("#displayRepaymentmonth").val(24);
-		//$("#displayLoanAmount").val(10000);
+		lastValid = document.getElementById("displayLoanAmount").value;
+		lastTenor = document.getElementById("displayRepaymentmonth").value;
 		calculteEMI();
 	});
 	var url = "http://" + hostName + port + "/rainbow/longTermLoan.html";
@@ -148,9 +148,8 @@ function loadMediumTermLoan(){
 		$("#rateOfInterest").hide();
 		var output = document.getElementById("rate1");
 		output.value = 42;
-		//$("#displayInterest").val(42);
-	//	$("#displayRepaymentmonth").val(12);
-		//$("#displayLoanAmount").val(10000);
+		lastValid = document.getElementById("displayLoanAmount").value;
+		lastTenor = document.getElementById("displayRepaymentmonth").value;
 		calculteEMI();
 	});
 	var url = "http://" + hostName + port + "/rainbow/mediumTermLoan.html";
