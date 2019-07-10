@@ -1311,6 +1311,15 @@ ul.entry-meta {
 	margin-top: 2%;
 }
 
+#aboutUsDesc {
+	width: 72%;
+	color: green;
+	font-size: 15px;
+	font-weight: inherit;
+	margin-left: 15%;
+	margin-top: 2%;
+}
+
 #mediumTermLoanDesc {
 	width: 72%;
 	color: green;
