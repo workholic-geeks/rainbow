@@ -1460,7 +1460,7 @@ text-align: center;
   max-height: 60%%;
   padding: 13px;
 }
-i {
+.arrow {
   border: solid green;
   border-width: 0 5px 5px 0;
   display: inline-block;
