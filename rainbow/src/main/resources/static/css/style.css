@@ -1445,3 +1445,28 @@ li>a {
 .checklist-subhead{
 text-align: center;
 }
+
+.slidContainer {
+  position: relative;
+}
+
+.slidContainer .slideContent {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  max-height: 60%%;
+  padding: 13px;
+}
+i {
+  border: solid green;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 8px;
+}
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
