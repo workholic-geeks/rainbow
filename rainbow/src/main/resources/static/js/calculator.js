@@ -27,15 +27,21 @@
 	var validNumber = new RegExp(/^\d*\.?\d*$/);
 	var lastValid ;
 	var lastTenor ;
-	function validateNumber(elem) {
+	function validateNumber(elem,maxLimit) {
 		  if (validNumber.test(elem.value)) {
+			  if(maxLimit<elem.value){
+				  elem.value=maxLimit;
+			  }else
 		    lastValid = numeral(elem.value).format('0,0.00');
 		  } else {
 		    elem.value = numeral(lastValid).format('0,0.00');
 		  }
 		}
-	function validateNumberTenor(elem) {
+	function validateNumberTenor(elem,maxLimit) {
 		  if (validNumber.test(elem.value)) {
+			  if(maxLimit < elem.value){
+				  elem.value=lastTenor;
+			  }else
 			  lastTenor = elem.value;
 		  } else {
 		    elem.value = lastTenor;
