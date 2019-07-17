@@ -67,6 +67,14 @@ function loadContactUs() {
 	$("#welcome").load(url);
 	active("#contactUsLink");
 }
+function loadMap() {
+	emptyAllSections();
+	removeAll();
+	var url = "http://" + hostName + port + "/rainbow/map.html";
+	$("#welcome").load(url);
+	active("#mapLink");
+}
+
 
 function loadFaq() {
 	emptyAllSections();
