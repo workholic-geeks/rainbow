@@ -113,12 +113,12 @@ function loadShortTermLoan(){
 		$("#slideshow > div:gt(0)").hide();
 		intervalId=setInterval(function() { 
 		  $('#slideshow > div:first')
-		    .fadeOut(1000)
+		    .fadeOut(2000)
 		    .next()
-		    .fadeIn(1000)
+		    .fadeIn(2000)
 		    .end()
 		    .appendTo('#slideshow');
-		},  3000);
+		},  5000);
 		active("#shortTermLoan");
 	});
 	$("#homepage").load(url);
@@ -140,12 +140,12 @@ function loadLongTermLoan(){
 		$("#slideshow > div:gt(0)").hide();
 		intervalId=setInterval(function() { 
 		  $('#slideshow > div:first')
-		    .fadeOut(1000)
+		    .fadeOut(2000)
 		    .next()
-		    .fadeIn(1000)
+		    .fadeIn(2000)
 		    .end()
 		    .appendTo('#slideshow');
-		},  3000);
+		},  5000);
 		active("#longTermLoan");
 	});
 	$("#homepage").load(url);
@@ -168,12 +168,12 @@ function loadMediumTermLoan(){
 
 		intervalId=setInterval(function() { 
 		  $('#slideshow > div:first')
-		    .fadeOut(1000)
+		    .fadeOut(2000)
 		    .next()
-		    .fadeIn(1000)
+		    .fadeIn(2000)
 		    .end()
 		    .appendTo('#slideshow');
-		},  3000);
+		},  5000);
 		active("#mediumTermLoan");
 	});
 	$("#homepage").load(url);
@@ -187,12 +187,12 @@ function loadHomePageSlider(){
 		$("#slideshow > div:gt(0)").hide();
 		intervalId=setInterval(function() { 
 		  $('#slideshow > div:first')
-		    .fadeOut(1000)
+		    .fadeOut(2000)
 		    .next()
-		    .fadeIn(1000)
+		    .fadeIn(2000)
 		    .end()
 		    .appendTo('#slideshow');
-		},  3000);
+		},  5000);
 		active("#shortTermLoan");
 	});
 }
