@@ -29,9 +29,9 @@
 	var lastTenor ;
 	function validateNumber(elem,maxLimit) {
 		  if (validNumber.test(elem.value)) {
-			  if(maxLimit<elem.value){
+			 /* if(maxLimit<elem.value){
 				  elem.value=maxLimit;
-			  }else
+			  }else*/
 		    lastValid = numeral(elem.value).format('0,0.00');
 		  } else {
 		    elem.value = numeral(lastValid).format('0,0.00');
