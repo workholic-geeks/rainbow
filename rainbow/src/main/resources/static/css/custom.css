@@ -24,12 +24,14 @@ width: 100%;
 {
 	top: 25%;
 }
-@media only screen and (min-width: 991px) {
-.mapImg {
-	width: 10%;
-	height: 10%;
+@media only screen and (min-width: 768px) { 
+	.mapImg {
+		width: 12%;
+		height: 12%;
+	}
 }
 
+@media only screen and (min-width: 991px) {
 .applyForm {
    width:100%;
    height:60%;
@@ -70,11 +72,6 @@ width: 100%;
 
 @media only screen and (max-width: 991px) {
 	
-	
-	.mapImg {
-		width: 5%;
-		height: 5%;
-	}
 	.applyForm {
 	/*    background:#E3E2E2; */
 	background: white;
