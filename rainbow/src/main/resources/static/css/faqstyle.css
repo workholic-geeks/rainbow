@@ -437,3 +437,7 @@ ol, ul {
 	list-style: none;
 }
 
+#welcome {
+    background: #fff;
+    padding: 0px 0 !important;
+}
