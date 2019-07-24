@@ -5,7 +5,7 @@
 }
 
 #myFooter .footer-copyright {
-    background-color: #333333;
+    background-color: green;
     padding-top: 3px;
     padding-bottom: 3px;
     text-align: center;
@@ -22,7 +22,7 @@
 
 #myFooter .footer-copyright p {
     margin: 10px;
-    color: #ccc;
+/*     color: #ccc; */
 }
 
 #myFooter ul {
