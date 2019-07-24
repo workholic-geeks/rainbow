@@ -358,7 +358,7 @@ Main components
   .cd-faq-trigger {
     font-size: 24px;
     font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: bold;
     margin: 0;
     padding: 24px 72px 24px 24px;
   }
@@ -412,6 +412,7 @@ Main components
 
 .cd-faq-content p {
   font-size: 14px;
+  font-weight:bold;
   font-size: 1.4rem;
   line-height: 1.4;
   color: #6c7d8e;
