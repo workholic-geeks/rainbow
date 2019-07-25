@@ -76,8 +76,11 @@ width: 100%;
 	/*    background:#E3E2E2; */
 	background: white;
 	  }  
-	.loan-content{
-		   display: none;
+
+    .loan-content {
+		font-size: 15px;
+		font-weight: bold;
+		margin-bottom: 2%;
 	}
   .side-call-logo
 	  {
