@@ -55,6 +55,7 @@ function loanProducts() {
 function loadCalculator() {
 	emptyAllSections();
 	removeAll();
+	callIconLoader();
 	var url = "http://" + hostName + port + "/rainbow/emiCalculator.html";
 	$("#welcome").load(url);	
 	active("#calculatorLink");
@@ -63,6 +64,7 @@ function loadCalculator() {
 function loadContactUs() {
 	emptyAllSections();
 	removeAll();
+	callIconLoader();
 	var url = "http://" + hostName + port + "/rainbow/contactUSForm.html";
 	$("#welcome").load(url);
 	active("#contactUsLink");
@@ -70,6 +72,7 @@ function loadContactUs() {
 function loadMap() {
 	emptyAllSections();
 	removeAll();
+	callIconLoader();
 	var url = "http://" + hostName + port + "/rainbow/map.html";
 	$("#welcome").load(url);
 	active("#mapLink");
@@ -79,6 +82,7 @@ function loadMap() {
 function loadFaq() {
 	emptyAllSections();
 	removeAll();
+	callIconLoader();
 	var url = "http://" + hostName + port + "/rainbow/faq.html";
 	$("#welcome").load(url);
 	active("#faqLink");
@@ -86,6 +90,7 @@ function loadFaq() {
 function loadAboutUs() {
 	emptyAllSections();
 	removeAll();
+	callIconLoader();
 	var url = "http://" + hostName + port + "/rainbow/aboutUs.html";
 	$("#welcome").load(url);
 	active("#aboutUsLink");
@@ -93,6 +98,7 @@ function loadAboutUs() {
 function loadCheckListQuestion() {
 	emptyAllSections();
 	removeAll();
+	callIconLoader();
 	var url = "http://" + hostName + port + "/rainbow/checkListQuestion.html";
 	$("#welcome").load(url);
 	active("#checkListQuestionLink");
@@ -106,6 +112,7 @@ function loadShortTermLoan(){
 		output.value = 42;
 		lastValid = document.getElementById("displayLoanAmount").value;
 		lastTenor = document.getElementById("displayRepaymentmonth").value;
+		callIconLoader();
 		calculteEMI();
 	});
 	var url = "http://" + hostName + port + "/rainbow/shortTermLoan.html";
@@ -133,6 +140,7 @@ function loadLongTermLoan(){
 		output.value = 42;
 		lastValid = document.getElementById("displayLoanAmount").value;
 		lastTenor = document.getElementById("displayRepaymentmonth").value;
+		callIconLoader();
 		calculteEMI();
 	});
 	var url = "http://" + hostName + port + "/rainbow/longTermLoan.html";
@@ -160,6 +168,7 @@ function loadMediumTermLoan(){
 		output.value = 42;
 		lastValid = document.getElementById("displayLoanAmount").value;
 		lastTenor = document.getElementById("displayRepaymentmonth").value;
+		callIconLoader();
 		calculteEMI();
 	});
 	var url = "http://" + hostName + port + "/rainbow/mediumTermLoan.html";
