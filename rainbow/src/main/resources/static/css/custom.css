@@ -66,7 +66,7 @@ width: 100%;
 	.loan-content {
 		font-size: 15px;
 		font-weight: bold;
-		margin-bottom: 2%;
+		margin-top: -3%;
 	}
 }
 
@@ -78,9 +78,10 @@ width: 100%;
 	  }  
 
     .loan-content {
-		font-size: 15px;
+		font-size: 14px;
 		font-weight: bold;
 		margin-bottom: 2%;
+		margin-top: -10%;
 	}
   .side-call-logo
 	  {
