@@ -112,7 +112,7 @@ function loadShortTermLoan(){
 		output.value = 42;
 		lastValid = document.getElementById("displayLoanAmount").value;
 		lastTenor = document.getElementById("displayRepaymentmonth").value;
-		callIconLoader();
+//		callIconLoader();
 		calculteEMI();
 	});
 	var url = "http://" + hostName + port + "/rainbow/shortTermLoan.html";
@@ -140,7 +140,7 @@ function loadLongTermLoan(){
 		output.value = 42;
 		lastValid = document.getElementById("displayLoanAmount").value;
 		lastTenor = document.getElementById("displayRepaymentmonth").value;
-		callIconLoader();
+	//	callIconLoader();
 		calculteEMI();
 	});
 	var url = "http://" + hostName + port + "/rainbow/longTermLoan.html";
@@ -168,7 +168,7 @@ function loadMediumTermLoan(){
 		output.value = 42;
 		lastValid = document.getElementById("displayLoanAmount").value;
 		lastTenor = document.getElementById("displayRepaymentmonth").value;
-		callIconLoader();
+	//	callIconLoader();
 		calculteEMI();
 	});
 	var url = "http://" + hostName + port + "/rainbow/mediumTermLoan.html";
